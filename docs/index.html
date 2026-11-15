@@ -795,7 +795,7 @@ var INTERVALS=[1,3,7,15,30];
 var MONTHS=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
 var DAYS=["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
 var VIEWS=["home","defter","analiz","ayarlar"];
-var APP_VERSION="Sürüm 21 · 15 Kasım 2026";
+var APP_VERSION="Sürüm 22 · 15 Kasım 2026";
 var LOGO_TILE='<svg aria-hidden="true" focusable="false" viewBox="0 0 512 512"><defs><linearGradient id="ydt-bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#5C8DFF"/><stop offset="0.5" stop-color="#4B5CFF"/><stop offset="1" stop-color="#7B3BEF"/></linearGradient><radialGradient id="ydt-hl" cx=".22" cy=".12" r=".75"><stop offset="0" stop-color="#fff" stop-opacity=".38"/><stop offset=".6" stop-color="#fff" stop-opacity="0"/></radialGradient><linearGradient id="ydt-ck" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFD45E"/><stop offset="1" stop-color="#FF5468"/></linearGradient><filter id="ydt-sh" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#17126B" flood-opacity="0.35"/></filter></defs><rect width="512" height="512" fill="url(#ydt-bg)"/><rect width="512" height="512" fill="url(#ydt-hl)"/><g filter="url(#ydt-sh)"><path d="M351.0 176.3A124 124 0 1 1 213.6 139.5" fill="none" stroke="#fff" stroke-width="44" stroke-linecap="round"/><path d="M254 124L199 104L224 175Z" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/><path d="M194 262L240 308L324 210" fill="none" stroke="url(#ydt-ck)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/></g></svg>';
 var ICONS={
   cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
@@ -3484,7 +3484,8 @@ function cleanOffscreen(img,raw){
     if(srcInk<0.0005)return {E:E,oc:oc,pre:null,blankSrc:true};
     process();
     if(inkOfData(E.base)<0.6*inkOfData(E.pre)){E.s.pencilOn=false;applyAuto();E.pencilUndone=true}
-    var cr=autoCropRect(E);E.s.crop=cr;var c=cr||{x:0,y:0,w:E.W,h:E.H};
+    /* no automatic crop here: it sometimes cut off the options or the text above the question */
+    E.s.crop=null;var c={x:0,y:0,w:E.W,h:E.H};
     var pre=cropOf(edProc,c);oc=cropOf(edOrig,c);
     if(inkRatio(pre)<BLANK){pre=oc;E.usedOriginal=true}
     return {E:E,oc:oc,pre:pre,c:c,blankSrc:false};

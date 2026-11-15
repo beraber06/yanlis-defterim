@@ -639,7 +639,8 @@ function cleanOffscreen(img,raw){
     if(srcInk<0.0005)return {E:E,oc:oc,pre:null,blankSrc:true};
     process();
     if(inkOfData(E.base)<0.6*inkOfData(E.pre)){E.s.pencilOn=false;applyAuto();E.pencilUndone=true}
-    var cr=autoCropRect(E);E.s.crop=cr;var c=cr||{x:0,y:0,w:E.W,h:E.H};
+    /* no automatic crop here: it sometimes cut off the options or the text above the question */
+    E.s.crop=null;var c={x:0,y:0,w:E.W,h:E.H};
     var pre=cropOf(edProc,c);oc=cropOf(edOrig,c);
     if(inkRatio(pre)<BLANK){pre=oc;E.usedOriginal=true}
     return {E:E,oc:oc,pre:pre,c:c,blankSrc:false};
