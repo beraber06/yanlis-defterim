@@ -1,0 +1,71 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Yanlış Defterim'in Android paketi: siteyi Chrome ile tam ekran açan ince bir kabuk
+// (Trusted Web Activity). Uygulamanın kendisi docs/ klasöründen yayınlanan sitedir;
+// kayıtlar Chrome'daki site verisinde durur, güncellemeler siteden kendiliğinden gelir.
+def twa = [
+    applicationId: 'io.github.beraber06.yanlisdefterim',
+    hostName     : 'beraber06.github.io',
+    launchPath   : '/yanlis-defterim/',
+    name         : 'Yanlış Defterim',
+    launcherName : 'Yanlışlarım',
+    themeColor   : '#F4F6FB',
+]
+
+android {
+    namespace twa.applicationId
+    compileSdk 34
+
+    defaultConfig {
+        applicationId twa.applicationId
+        minSdk 23
+        targetSdk 34
+        versionCode((System.getenv('GITHUB_RUN_NUMBER') ?: '1') as int)
+        versionName "1." + (System.getenv('GITHUB_RUN_NUMBER') ?: '0')
+
+        resValue 'string', 'appName', twa.name
+        resValue 'string', 'launcherName', twa.launcherName
+        resValue 'string', 'hostName', twa.hostName
+        resValue 'string', 'launchUrl', 'https://' + twa.hostName + twa.launchPath
+        resValue 'string', 'providerAuthority', twa.applicationId + '.fileprovider'
+        resValue 'color', 'colorPrimary', twa.themeColor
+        resValue 'string', 'assetStatements',
+                '[{ \\"relation\\": [\\"delegate_permission/common.handle_all_urls\\"],' +
+                ' \\"target\\": {\\"namespace\\": \\"web\\", \\"site\\": \\"https://' + twa.hostName + '\\"}}]'
+    }
+
+    signingConfigs {
+        release {
+            def ks = System.getenv('KS_FILE')
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv('KS_PASS')
+                keyAlias 'yd'
+                keyPassword System.getenv('KS_PASS')
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            if (System.getenv('KS_FILE')) signingConfig signingConfigs.release
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation 'com.google.androidbrowserhelper:androidbrowserhelper:2.5.0'
+}
