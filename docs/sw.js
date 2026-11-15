@@ -1,6 +1,6 @@
 // Yanlış Defterim: uygulama dosyalarını telefona kaydeder, internetsiz açılmasını sağlar.
 // Yeni sürümde aşağıdaki adı değiştirmek eski dosyaları temizler.
-const CACHE = "yanlis-defterim-v19";
+const CACHE = "yanlis-defterim-v20";
 const FILES = [
   "./",
   "index.html",

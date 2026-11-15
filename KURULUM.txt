@@ -1,4 +1,4 @@
-YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 19)
+YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 20)
 
 Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulamasıdır.
 İnternet yalnızca kurulumda, güncellemede ve isteğe bağlı yapay zekâ özelliklerinde gerekir.
@@ -73,8 +73,10 @@ Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulam
 4) ESKİ SORULARI TOPLU EKLEMEK
 
    - Bugün ekranında "Toplu ekle" > galeriden 40'a kadar fotoğraf seçin.
-   - Program her fotoğrafı temizler. Yapay zekâ anahtarı varsa ders, konu,
-     doğru cevap ve işaretlenen şıkkı da kendisi doldurur.
+   - Program her fotoğrafı kendisi hızlıca temizler; yapay zekâ kendiliğinden
+     çalışmaz. İsterseniz üstteki "Yapay zekâ ile oku" düğmesiyle (ya da her
+     fotoğraftaki bağlantıyla) ders, konu, doğru cevap ve işaretli şıkkı
+     yapay zekâ doldurur; elle seçtikleriniz değişmez.
    - Listeyi kontrol edin; yanlış okunan varsa düzeltin. Fotoğrafı düzeltmek için
      sihirli değnek düğmesine basın. Sonra "… soruyu kaydet".
    - Hepsi aynı gün sorulmaz. Ayarlar > "Günde kaç soru gelsin" (varsayılan 20):

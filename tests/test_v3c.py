@@ -26,6 +26,8 @@ try:
     pg.goto(URL);pg.evaluate("localStorage.setItem('yd_settings',JSON.stringify({grade:7,name:'',newPerDay:10,maxPerDay:25,weekGoal:5}));localStorage.setItem('yd_aiKey','AIzaTESTKEY0123456789abcdef')");pg.reload();pg.wait_for_selector(".hero")
     with pg.expect_file_chooser() as fc: pg.click(".hero button:has-text('toplu ekle')")
     fc.value.set_files([PHOTO,SP+"/tests/test-question.jpg",PHOTO])
+    pg.wait_for_function("(()=>{const p=[...document.querySelectorAll('#bulk .bitem .pill')];return p.length>0&&p.every(x=>x.textContent==='Hazır')})()",timeout=90000)
+    pg.click("#bulk-head button:has-text('Yapay zekâ ile oku')")
     pg.wait_for_function("(()=>{const b=document.querySelector('#bulk-save');return b&&!b.disabled})()",timeout=90000)
     print("0 prompt has Task 2b:", "Task 2b" in prompts[0], "| schema solved:", '"solved"' in prompts[0])
     cards=pg.locator("#bulk .bitem")
