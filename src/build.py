@@ -34,11 +34,13 @@ ai_js = rep(ai_js, "if(a.topic&&!form.topic.trim())form.topic=a.topic;", "if(a.t
 ai_js = rep(ai_js, "renderStats()", "renderSettings()", count=4)
 # eraser: brush by default; new photos are cropped automatically (undo: Kırp -> Tüm fotoğraf)
 editor_js = rep(editor_js, 'crop:null,brush:22,tool:"tap"}}', 'crop:null,brush:22,tool:"brush"}}')
+# new photos are only brightened (shadows removed, paper whitened); pencil removal and crop are done only when asked
+editor_js = rep(editor_js, 'scanOn:on,pencilOn:on,', 'scanOn:on,pencilOn:false,')
 editor_js = rep(editor_js, "  ed={k:k,raw:raw,isOrig:isOrig,s:st,mode:\"clean\",", "  st.tool=\"brush\";\n  ed={k:k,raw:raw,isOrig:isOrig,s:st,mode:\"clean\",")
-editor_js = rep(editor_js, '    process();$("#ed-busy").hidden=true;draw();', '    process();\n    if(!form[k+"Ed"]&&!st.crop){var ac=autoCropRect(ed);if(ac){ed.s.crop=ac;ed.autoCrop=true;toast("Soru otomatik kırpıldı. Beğenmezsen Kırp → Tüm fotoğraf.")}}\n    $("#ed-busy").hidden=true;draw();')
+editor_js = rep(editor_js, '    process();$("#ed-busy").hidden=true;draw();', '    process();\n    $("#ed-busy").hidden=true;draw();')
 editor_js = rep(editor_js, """  var had=ed.s.strokes.length||ed.s.crop;
   ed.s.rot=((ed.s.rot||0)+dir+4)%4;ed.s.strokes=[];ed.s.crop=null;ed.draft=null;
-  heavy(function(){buildOrig();process()});""", """  var auto=!!ed.autoCrop||(!ed.s.crop&&!ed.userUncrop),had=ed.s.strokes.length||(ed.s.crop&&!ed.autoCrop);
+  heavy(function(){buildOrig();process()});""", """  var auto=!!ed.autoCrop,had=ed.s.strokes.length||(ed.s.crop&&!ed.autoCrop);
   ed.s.rot=((ed.s.rot||0)+dir+4)%4;ed.s.strokes=[];ed.s.crop=null;ed.draft=null;
   heavy(function(){buildOrig();process();if(auto){var ac=autoCropRect(ed);ed.s.crop=ac;ed.autoCrop=!!ac}});""")
 editor_js = rep(editor_js, '  ed.s.crop={x:r.x,y:r.y,w:r.w,h:r.h};setMode("clean");toast("Kırpıldı.");', '  ed.s.crop={x:r.x,y:r.y,w:r.w,h:r.h};ed.autoCrop=false;setMode("clean");toast("Kırpıldı.");')
@@ -101,7 +103,7 @@ core = (B / "core.js").read_text(encoding="utf-8")
 core = rep(core, "{{LOGO_TILE}}", (B / "logo_tile.svg").read_text().replace("'", "\\'"))
 js = ("<script>\n(function(){\n\"use strict\";\n" + (B / "mufredat.js").read_text(encoding="utf-8") + "\n" + core + "\n" + photos_js +
       editor_js + overrides + ai_js + (B / "pdf.js").read_text(encoding="utf-8") + "\n" + (B / "features.js").read_text(encoding="utf-8") + "\n" + store_js + boot +
-      "})();\nif(\"serviceWorker\" in navigator&&location.protocol!==\"file:\"){window.addEventListener(\"load\",function(){var t0=Date.now(),had=!!navigator.serviceWorker.controller,done=false;navigator.serviceWorker.addEventListener(\"controllerchange\",function(){if(!had||done)return;done=true;if(Date.now()-t0<15000&&!document.querySelector(\".screen:not([hidden]),.overlay:not([hidden])\"))location.reload();else if(typeof toast===\"function\")toast(\"Yeni sürüm yüklendi. Uygulamayı kapatıp açınca görünür.\")});navigator.serviceWorker.register(\"sw.js\",{updateViaCache:\"none\"}).then(function(r){try{r.update()}catch(e){}}).catch(function(){})})}\n</script>\n</body>\n</html>\n")
+      "})();\nif(\"serviceWorker\" in navigator&&location.protocol!==\"file:\"){window.addEventListener(\"load\",function(){var t0=Date.now(),had=!!navigator.serviceWorker.controller,done=false;navigator.serviceWorker.addEventListener(\"controllerchange\",function(){if(!had||done)return;done=true;if(Date.now()-t0<15000&&!document.querySelector(\".screen:not([hidden]),.overlay:not([hidden])\"))location.reload()});navigator.serviceWorker.register(\"sw.js\",{updateViaCache:\"none\"}).then(function(r){try{r.update()}catch(e){}}).catch(function(){})})}\n</script>\n</body>\n</html>\n")
 out = head + js
 for bad in ["{{", "renderStats()", "view===\"ekle\""]:
     if bad in out.replace("renderStats(){", ""):

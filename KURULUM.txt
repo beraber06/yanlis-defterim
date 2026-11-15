@@ -1,4 +1,4 @@
-YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 23)
+YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 24)
 
 Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulamasıdır.
 İnternet yalnızca kurulumda, güncellemede ve isteğe bağlı yapay zekâ özelliklerinde gerekir.
@@ -30,9 +30,10 @@ Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulam
 3) GÜNLÜK KULLANIM
 
    Soru eklemek:
-   - Alttaki mavi + düğmesi kamerayı açar. Fotoğrafı çekin. Program soruyu
-     otomatik kırpar (beğenmezseniz Kırp → Tüm fotoğraf) ve silik kalem izlerini
-     temizler. Kalan izleri Silgi'deki fırçayla üzerinden geçerek silin.
+   - Alttaki mavi + düğmesi kamerayı açar. Fotoğrafı çekin. Program fotoğrafı
+     yalnızca aydınlatır (gölgeleri siler, kâğıdı beyazlatır). Gerekirse kendiniz:
+     Kırp ile kırpın, "Silik kalem izlerini sil" kutusunu açın ya da Silgi'deki
+     fırçayla izlerin üzerinden geçin.
    - Ders seçin, Konu listesinden konuyu seçin (MEB müfredatından gelir).
    - Doğru cevap ve öğrencinin cevabını işaretleyin.
    - Dikkat notu (isteğe bağlı): "Bir dahakine neye dikkat edeceğim?" yazın ya da
@@ -78,7 +79,8 @@ Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulam
    - Bugün ekranında "Toplu ekle" > galeriden 40'a kadar fotoğraf seçin.
    - Toplu eklemede fotoğraflar kırpılmaz, olduğu gibi kalır. Kırpmak isterseniz
      fotoğraftaki sihirli değnek düğmesi > Kırp.
-   - Program her fotoğrafı kendisi hızlıca temizler; yapay zekâ kendiliğinden
+   - Program her fotoğrafı yalnızca aydınlatır; kalem izi silme ve kırpma
+     isteğe bağlıdır (sihirli değnek). Yapay zekâ kendiliğinden
      çalışmaz. İsterseniz üstteki "Yapay zekâ ile oku" düğmesiyle (ya da her
      fotoğraftaki bağlantıyla) ders, konu, doğru cevap ve işaretli şıkkı
      yapay zekâ doldurur; elle seçtikleriniz değişmez.

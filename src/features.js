@@ -582,7 +582,7 @@ async function runBulk(){
     for(var i=0;i<me.list.length;i++){
       if(bulk!==me)return;
       var b=me.list[i];if(b.st!=="wait")continue;
-      b.st="work";b.msg="Temizleniyor…";bulkItemUpdate(b);bulkHead();
+      b.st="work";b.msg="Aydınlatılıyor…";bulkItemUpdate(b);bulkHead();
       await new Promise(function(r){setTimeout(r,40)});
       try{await bulkProcess(b,me)}catch(e){ed=null;b.st="fail";b.msg="Fotoğraf açılamadı"}
       if(bulk!==me)return;
@@ -857,7 +857,7 @@ function bulkCard(b,i){
   else if(b.st==="work")th.appendChild(el("span","spin"));else th.textContent=String(i+1);
   tp.appendChild(th);
   var mid=el("div","st");mid.appendChild(el("b",null,(i+1)+". soru"));
-  mid.appendChild(b.busy?el("span","pill due",b.msg||"Temizleniyor…"):b.st==="ready"?(b.ai?el("span","pill done","Yapay zekâ doldurdu"):el("span","pill","Hazır")):b.st==="work"?el("span","pill due",b.msg||"Hazırlanıyor…"):b.st==="fail"?el("span","pill fail",b.msg||"Açılamadı"):el("span","pill","Sırada"));
+  mid.appendChild(b.busy?el("span","pill due",b.msg||"Çalışıyor…"):b.st==="ready"?(b.ai?el("span","pill done","Yapay zekâ doldurdu"):el("span","pill","Hazır")):b.st==="work"?el("span","pill due",b.msg||"Hazırlanıyor…"):b.st==="fail"?el("span","pill fail",b.msg||"Açılamadı"):el("span","pill","Sırada"));
   if(b.aiMsg&&b.st==="ready")mid.appendChild(el("span","muted small","Yapay zekâ okuyamadı: "+b.aiMsg));
   if(b.aiNote&&b.st==="ready")mid.appendChild(el("span","muted small",b.aiNote));
   if(b.st==="ready"&&!b.ai&&!b.busy&&aiKey()&&!(bulk&&bulk.reading)){var rb=el("button","linkbtn sm","Yapay zekâ ile oku");rb.type="button";rb.addEventListener("click",function(){bulkAiRead(b)});mid.appendChild(rb)}
@@ -924,7 +924,7 @@ function bulkHead(){
   if(B.saving){hd.appendChild(el("b",null,"Kaydediliyor… "+B.saved+" / "+ok));hd.appendChild(bar(ok?B.saved/ok:0))}
   else if(done<tot){
     hd.appendChild(el("b",null,"Fotoğraflar hazırlanıyor… "+done+" / "+tot));hd.appendChild(bar(tot?done/tot:0));
-    hd.appendChild(el("span","muted small","Kalem izlerini program kendisi temizliyor. Hazır olanları bu sırada kontrol edebilirsin."));
+    hd.appendChild(el("span","muted small","Program fotoğrafları yalnızca aydınlatıyor; kalem izi silme ve kırpma senin isteğine bağlı. Hazır olanları bu sırada kontrol edebilirsin."));
   }else{
     hd.appendChild(el("b",null,ok+" soru hazır"));
     var msg=[];if(noSub)msg.push(noSub+" sorunun dersi seçilmedi");if(noTop)msg.push(noTop+" sorunun konusu boş, sonra Defter'den düzenleyebilirsin");if(noKey)msg.push(noKey+" sorunun doğru cevabı seçilmedi; cevap anahtarından seçebilir ya da tekrarda girebilirsin");
@@ -941,7 +941,7 @@ function bulkHead(){
   }
   if(!B.saving&&(withMarks||B.cleaning)){
     var ab=el("div","aiclean");
-    ab.appendChild(el("span","small",B.cleaning?"Yapay zekâ izleri siliyor… ":"Kalem izlerini program kendisi temizledi. Yapay zekâ "+withMarks+" fotoğrafta kalan iz buldu; istersen onları da yapay zekâ silsin."));
+    ab.appendChild(el("span","small",B.cleaning?"Yapay zekâ izleri siliyor… ":"Yapay zekâ "+withMarks+" fotoğrafta kalem izi buldu; istersen silsin. Elle silmek için fotoğraftaki sihirli değneğe dokun."));
     if(!B.cleaning)ab.appendChild(btn("ghost sm","Hepsini yapay zekâ ile temizle",bulkAiCleanAll,ICONS.spark));
     hd.appendChild(ab);
   }
