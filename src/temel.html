@@ -1,0 +1,1809 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Yanlış Defterim</title>
+<meta name="description" content="7. sınıf test yanlışlarını kaydeden ve aralıklı tekrarla yeniden soran yanlış defteri.">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Yanlışlarım">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="theme-color" content="#F4F7FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)">
+<style>
+@font-face{font-family:"Nunito";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/nunito-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:400;font-display:swap;src:url(fonts/nunito-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/nunito-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/nunito-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/nunito-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Nunito";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/nunito-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Baloo 2";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/baloo-2-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Baloo 2";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/baloo-2-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Baloo 2";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/baloo-2-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Baloo 2";font-style:normal;font-weight:800;font-display:swap;src:url(fonts/baloo-2-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/caveat-latin-ext-700-normal.woff2) format("woff2");unicode-range:U+0100-02AF,U+0304,U+0308,U+0329,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"Caveat";font-style:normal;font-weight:700;font-display:swap;src:url(fonts/caveat-latin-700-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+
+html{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);-webkit-text-size-adjust:100%}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+/* Layout: kareli defter zemini üzerinde tek sütun kartlar, altta dört sekmeli çubuk */
+:root{
+  --paper:#F4F7FB; --grid:rgba(52,96,176,.085); --card:#FFFFFF; --ink:#1A2A47; --ink-soft:#5B6882; --line:#D8DFEB; --field:#F7F9FC;
+  --pen:#D3263A; --pen-soft:#FCE7EA; --ok:#15805A; --ok-soft:#DDF2E7; --hi:#FFE15A; --hi-ink:#1A2A47;
+  --shadow:0 1px 2px rgba(26,42,71,.06),0 8px 22px rgba(26,42,71,.07);
+  --s-mat:#3263D1; --s-fen:#178A5B; --s-tr:#C9620E; --s-par:#8447CC; --s-din:#0B8496; --s-sos:#966418; --s-ing:#C2367C;
+  --f-display:"Baloo 2","Nunito",system-ui,sans-serif;
+  --f-body:"Nunito",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-pen:"Caveat","Segoe Print","Comic Sans MS",cursive;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#111827; --grid:rgba(120,160,235,.07); --card:#1A2335; --ink:#E7EDF8; --ink-soft:#9DAAC3; --line:#2B3754; --field:#141C2B;
+  --pen:#FF6170; --pen-soft:#3B1D26; --ok:#4FC690; --ok-soft:#163328; --hi:#E9CB3E; --hi-ink:#1A2A47;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px rgba(0,0,0,.25);
+  --s-mat:#7EA2FF; --s-fen:#4FCB95; --s-tr:#F2A05A; --s-par:#BB94F5; --s-din:#4CC9DB; --s-sos:#D7AA5E; --s-ing:#F07DB6;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --paper:#111827; --grid:rgba(120,160,235,.07); --card:#1A2335; --ink:#E7EDF8; --ink-soft:#9DAAC3; --line:#2B3754; --field:#141C2B;
+  --pen:#FF6170; --pen-soft:#3B1D26; --ok:#4FC690; --ok-soft:#163328; --hi:#E9CB3E; --hi-ink:#1A2A47;
+  --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 22px rgba(0,0,0,.25);
+  --s-mat:#7EA2FF; --s-fen:#4FCB95; --s-tr:#F2A05A; --s-par:#BB94F5; --s-din:#4CC9DB; --s-sos:#D7AA5E; --s-ing:#F07DB6;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  background-color:var(--paper); color:var(--ink); font-family:var(--f-body); font-size:16px; line-height:1.5;
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:24px 24px; -webkit-tap-highlight-color:transparent;
+}
+button,input,textarea,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:3px solid color-mix(in srgb,var(--s-mat) 60%,transparent);outline-offset:2px}
+.wrap{max-width:640px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:18px 120px;display:flex;flex-direction:column;gap:18px}
+header.top{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--f-display);font-weight:800;font-size:30px;line-height:1.05;margin:0;letter-spacing:-.01em}
+h1 span{position:relative;white-space:nowrap}
+h1 span::after{content:"";position:absolute;left:-2px;right:-4px;bottom:1px;height:7px;background:var(--pen);opacity:.85;border-radius:6px 2px 8px 3px;transform:rotate(-1.2deg);z-index:-1}
+h1 span{z-index:0;isolation:isolate}
+.date{font-weight:700;color:var(--ink-soft);font-size:14px}
+h2{font-family:var(--f-display);font-weight:700;font-size:21px;margin:0;line-height:1.2;text-wrap:balance}
+h3{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin:0;font-weight:800}
+.muted{color:var(--ink-soft)}
+.small{font-size:13px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);padding:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.plain{background:transparent;border:0;box-shadow:none;padding:0}
+
+/* Hero count */
+.due-head{display:flex;align-items:center;gap:16px}
+.due-num{font-family:var(--f-display);font-weight:800;font-size:56px;line-height:.9;font-variant-numeric:tabular-nums;background:linear-gradient(transparent 55%,color-mix(in srgb,var(--hi) 75%,transparent) 55%);padding:0 6px;border-radius:3px}
+.due-text{display:flex;flex-direction:column;gap:2px;min-width:0}
+.due-text b{font-size:18px}
+
+/* Chips */
+.chip{--c:var(--ink-soft);display:inline-flex;align-items:center;gap:6px;color:var(--c);background:color-mix(in srgb,var(--c) 12%,transparent);border:1px solid color-mix(in srgb,var(--c) 32%,transparent);border-radius:999px;padding:1px 10px;font-weight:800;font-size:12.5px;white-space:nowrap}
+.chip.dot::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c)}
+.row{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.between{justify-content:space-between}
+.topic{font-weight:800;font-size:17px;line-height:1.3;overflow-wrap:anywhere}
+
+/* Stage dots */
+.stages{display:inline-flex;gap:4px;align-items:center}
+.stages i{width:9px;height:9px;border-radius:50%;border:1.5px solid var(--ok);display:block}
+.stages i.on{background:var(--ok)}
+
+/* Photos */
+.photo{display:block;width:100%;border-radius:12px;border:1px solid var(--line);background:var(--field);overflow:hidden;padding:0}
+.photo img{display:block;width:100%;max-height:60vh;object-fit:contain;background:#fff}
+.qtext{white-space:pre-wrap;overflow-wrap:anywhere;font-size:16px;background:var(--field);border:1px dashed var(--line);border-radius:12px;padding:12px 14px}
+
+/* Reveal */
+.answers{display:flex;gap:18px;flex-wrap:wrap;align-items:baseline}
+.ans-mine{font-weight:700;color:var(--ink-soft)}
+.ans-mine s{text-decoration-color:var(--pen);text-decoration-thickness:2px}
+.ans-right{font-family:var(--f-pen);font-weight:700;color:var(--pen);font-size:30px;line-height:1}
+.pen-note{font-family:var(--f-pen);font-size:22px;color:var(--pen);line-height:1.15}
+.solution{border-left:3px solid var(--pen);padding:2px 0 2px 12px;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 18px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font-weight:800;font-size:16px;text-align:center}
+.btn.primary{background:var(--ink);color:var(--card);border-color:var(--ink)}
+.btn.good{background:var(--ok);color:#fff;border-color:var(--ok)}
+.btn.bad{color:var(--pen);border-color:color-mix(in srgb,var(--pen) 55%,transparent);background:var(--pen-soft)}
+.btn.ghost{background:transparent}
+.btn.danger{color:var(--pen);border-color:color-mix(in srgb,var(--pen) 45%,transparent);background:transparent}
+.btn[disabled]{opacity:.55;cursor:default}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.btn.block{width:100%}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .btn.good{color:#0E2219}}
+:root[data-theme="dark"] .btn.good{color:#0E2219}
+
+/* Steps (empty state) */
+.steps{display:grid;gap:10px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{display:grid;grid-template-columns:34px 1fr;gap:10px;align-items:start;counter-increment:s}
+.steps li::before{content:counter(s);width:30px;height:30px;border-radius:50%;border:2px solid var(--pen);color:var(--pen);font-family:var(--f-pen);font-weight:700;font-size:22px;display:grid;place-items:center;line-height:1}
+
+/* List */
+.filters{display:flex;flex-direction:column;gap:10px}
+.scroller{display:flex;gap:6px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+.scroller::-webkit-scrollbar{display:none}
+.pick{--c:var(--ink);flex:0 0 auto;border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:6px 13px;font-weight:700;font-size:14px;white-space:nowrap}
+.pick[aria-pressed="true"]{background:var(--c);border-color:var(--c);color:var(--card)}
+.selects{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.field{width:100%;min-height:44px;border:1.5px solid var(--line);background:var(--field);border-radius:10px;padding:9px 12px;font-size:16px}
+textarea.field{min-height:84px;resize:vertical}
+.items{display:flex;flex-direction:column;gap:10px}
+.item{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;text-align:left;width:100%;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px;box-shadow:var(--shadow)}
+.thumb{width:64px;height:64px;border-radius:10px;background:var(--field);border:1px solid var(--line);overflow:hidden;display:grid;place-items:center;color:var(--ink-soft);font-family:var(--f-pen);font-size:26px}
+.thumb img{width:100%;height:100%;object-fit:cover;background:#fff}
+.item-body{display:flex;flex-direction:column;gap:4px;min-width:0}
+.item-topic{font-weight:800;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.next{font-size:12.5px;font-weight:800;padding:1px 8px;border-radius:6px;background:var(--field);color:var(--ink-soft);white-space:nowrap}
+.next.due{background:color-mix(in srgb,var(--hi) 80%,transparent);color:var(--hi-ink)}
+.next.done{background:var(--ok-soft);color:var(--ok)}
+
+/* Form */
+.fgroup{display:flex;flex-direction:column;gap:8px}
+.flabel{font-weight:800;font-size:14px}
+.flabel em{font-style:normal;font-weight:600;color:var(--ink-soft)}
+.wrapchips{display:flex;flex-wrap:wrap;gap:6px}
+.letters{display:flex;gap:8px;flex-wrap:wrap}
+.letter{width:48px;height:48px;border-radius:12px;border:1.5px solid var(--line);background:var(--card);font-weight:800;font-size:18px;display:grid;place-items:center}
+.letter.wide{width:auto;padding:0 14px;font-size:15px}
+.letter[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--card)}
+.letter.right[aria-pressed="true"]{background:var(--pen);border-color:var(--pen);color:#fff}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.drop{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:120px;border:2px dashed var(--line);border-radius:14px;background:var(--field);text-align:center;padding:12px;font-weight:700;color:var(--ink-soft);overflow:hidden}
+.pick-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;width:100%;margin-top:6px}
+.pick-row .btn{padding:10px 6px;gap:6px;font-size:14.5px;min-width:0;white-space:nowrap}
+.btn svg{width:20px;height:20px;flex:0 0 auto}
+.drop img{max-height:220px;width:auto;max-width:100%;border-radius:8px;background:#fff}
+.drop .big{font-family:var(--f-pen);font-size:26px;color:var(--ink)}
+.linkbtn{background:none;border:0;padding:4px 0;color:var(--pen);font-weight:800;font-size:14px;align-self:flex-start}
+@media (max-width:420px){.two{grid-template-columns:1fr}}
+
+/* Stats */
+.figs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fig{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:0;box-shadow:var(--shadow)}
+.fig b{font-family:var(--f-display);font-size:30px;line-height:1.1;font-variant-numeric:tabular-nums}
+.fig span{font-size:13px;color:var(--ink-soft);font-weight:700}
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(96px,34%) 1fr 30px;gap:10px;align-items:center;font-size:14px}
+.bar .lbl{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+.track{height:14px;border-radius:7px;background:var(--field);border:1px solid var(--line);overflow:hidden;display:flex}
+.fill{height:100%;background:var(--c,var(--ink-soft))}
+.fill.ok{background:color-mix(in srgb,var(--c,var(--ok)) 45%,transparent)}
+.bar .n{font-weight:800;text-align:right;font-variant-numeric:tabular-nums}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-soft);font-weight:700}
+.legend i{display:inline-block;width:12px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.tip{background:color-mix(in srgb,var(--hi) 30%,var(--card));border:1px solid color-mix(in srgb,var(--hi) 70%,var(--line));border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.tip .pen-note{color:var(--ink)}
+
+/* Tab bar */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:color-mix(in srgb,var(--card) 94%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-top:1px solid var(--line);padding-top:6px;padding-bottom:calc(6px + env(safe-area-inset-bottom,0px));padding-left:max(8px,env(safe-area-inset-left,0px));padding-right:max(8px,env(safe-area-inset-right,0px))}
+nav.tabs .in{max-width:640px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:4px}
+.tab{border:0;background:transparent;border-radius:12px;padding:6px 2px;display:flex;flex-direction:column;align-items:center;gap:2px;font-weight:800;font-size:12.5px;color:var(--ink-soft);position:relative}
+.tab svg{width:24px;height:24px}
+.tab[aria-current="page"]{color:var(--ink)}
+.tab[aria-current="page"] svg{color:var(--pen)}
+.tab .badge{position:absolute;top:1px;left:calc(50% + 6px);min-width:18px;height:18px;border-radius:9px;background:var(--pen);color:#fff;font-size:11px;display:grid;place-items:center;padding:0 5px;font-variant-numeric:tabular-nums}
+
+/* Sheet + lightbox */
+.overlay{position:fixed;inset:0;z-index:40;background:rgba(10,16,30,.55);display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--paper);width:100%;max-width:640px;max-height:92%;overflow-y:auto;border-radius:20px 20px 0 0;padding-top:10px;padding-bottom:calc(20px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:14px}
+.grab{width:44px;height:5px;border-radius:3px;background:var(--line);align-self:center}
+.meta{display:grid;grid-template-columns:1fr 1fr;gap:8px 14px;font-size:14px}
+.meta div{display:flex;flex-direction:column}
+.meta span{color:var(--ink-soft);font-size:12.5px;font-weight:700}
+.meta b{font-variant-numeric:tabular-nums}
+.confirm{background:var(--pen-soft);border:1px solid color-mix(in srgb,var(--pen) 40%,transparent);border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px}
+#lightbox{position:fixed;inset:0;z-index:50;background:rgba(5,8,15,.97);display:flex;align-items:center;justify-content:center;padding:16px}
+#lightbox{touch-action:none;overflow:hidden}
+#lightbox img{max-width:100%;max-height:100%;object-fit:contain;background:#fff;border-radius:6px;transform-origin:center center;will-change:transform;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+.lb-close{position:absolute;top:calc(12px + env(safe-area-inset-top,0px));right:calc(12px + env(safe-area-inset-right,0px));z-index:2}
+.lb-hint{position:absolute;left:0;right:0;bottom:calc(10px + env(safe-area-inset-bottom,0px));margin:0;text-align:center;color:rgba(255,255,255,.75);font-size:13px;font-weight:700;pointer-events:none}
+#toast{position:fixed;left:50%;bottom:calc(84px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:60;background:var(--ink);color:var(--card);padding:10px 16px;border-radius:12px;font-weight:700;font-size:14.5px;max-width:min(92vw,520px);text-align:center;transition:opacity .2s,transform .2s;pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+.notice{border:1.5px dashed var(--line);border-radius:14px;padding:14px;color:var(--ink-soft);font-weight:600}
+.sample{opacity:.9;border-style:dashed}
+.tag-ex{font-family:var(--f-pen);color:var(--pen);font-size:20px;line-height:1}
+/* Photo cleaner */
+.editor{position:fixed;inset:0;z-index:45;background:var(--paper);display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+.ed-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--card)}
+.ed-top h2{font-size:19px;min-width:0}
+.ed-topbtns{display:flex;align-items:center;gap:6px}
+.iconbtn{width:40px;height:40px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);display:grid;place-items:center;padding:0}
+.iconbtn svg{width:21px;height:21px}
+.ed-stage{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:12px;background:var(--field);overflow:hidden;position:relative}
+.ed-stage{touch-action:none}
+.ed-stage canvas{display:block;background:#fff;box-shadow:var(--shadow);border-radius:4px;touch-action:none;max-width:100%;max-height:100%;transform-origin:center center;will-change:transform}
+.ed-zoom{position:absolute;right:12px;bottom:12px;display:flex;gap:6px;z-index:2}
+.ed-zoom .iconbtn{box-shadow:var(--shadow)}
+.iconbtn[disabled]{opacity:.45;cursor:default}
+.seg.two{grid-template-columns:1fr 1fr}
+.ed-busy{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:3;background:var(--card);color:var(--ink);padding:10px 16px;border-radius:12px;box-shadow:var(--shadow);font-weight:800;white-space:nowrap;display:flex;align-items:center;gap:12px}
+.ed-busy span::before{content:"";display:inline-block;width:12px;height:12px;margin-right:8px;border-radius:50%;border:2px solid var(--ink-soft);border-right-color:transparent;vertical-align:-1px;animation:spin .8s linear infinite}
+.btn.ai{border-color:var(--ink);color:var(--ink)}
+.btn.ai svg{color:var(--pen)}
+.ai-review{background:color-mix(in srgb,var(--pen) 7%,var(--card));border:1px solid color-mix(in srgb,var(--pen) 35%,var(--line));border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:10px}
+.ai-review p{margin:0;font-weight:700;font-size:14.5px}
+.ai-box{display:flex;flex-direction:column;gap:6px}
+.ai-steps summary{cursor:pointer;font-weight:800;color:var(--ink)}
+.ai-steps ol{margin:8px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:14.5px}
+.ai-steps a{color:var(--pen);font-weight:800;overflow-wrap:anywhere}
+.ed-tools{background:var(--card);border-top:1px solid var(--line);padding:10px 16px 12px;display:flex;flex-direction:column;gap:10px;max-height:46%;overflow-y:auto}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;background:var(--field);border:1px solid var(--line);border-radius:12px;padding:3px}
+.seg button{border:0;background:transparent;border-radius:9px;padding:8px 4px;font-weight:800;font-size:14px;color:var(--ink-soft)}
+.seg button[aria-pressed="true"]{background:var(--card);color:var(--ink);box-shadow:var(--shadow)}
+.ctl{display:grid;grid-template-columns:1fr auto;gap:4px 12px;align-items:center;font-weight:700;font-size:14.5px}
+.ctl input[type=range]{grid-column:1/-1;width:100%;accent-color:var(--pen)}
+.ctl input[type=checkbox]{width:22px;height:22px;accent-color:var(--pen)}
+.ed-hint{font-size:13px;color:var(--ink-soft);margin:0}
+.ed-row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.ed-bottom{display:grid;grid-template-columns:auto 1fr;gap:8px}
+.photo-actions{display:flex;gap:16px;flex-wrap:wrap}
+.ai-note{display:flex;flex-direction:column;gap:2px;align-items:flex-start;font-size:14px;font-weight:700;border-radius:12px;padding:10px 12px;background:color-mix(in srgb,var(--hi) 28%,var(--card));border:1px solid color-mix(in srgb,var(--hi) 65%,var(--line))}
+.ai-note.busy{background:var(--field);border-color:var(--line);color:var(--ink-soft)}
+.ai-note.busy span::after{content:"";display:inline-block;width:10px;height:10px;margin-left:8px;border-radius:50%;border:2px solid var(--ink-soft);border-right-color:transparent;vertical-align:-1px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <h1><span>Yanlış</span> Defterim</h1>
+    <div class="date" id="today"></div>
+  </header>
+
+  <main>
+    <section id="v-tekrar" class="view" aria-label="Bugünün tekrarı"></section>
+    <section id="v-defter" class="view" aria-label="Tüm yanlışlar" hidden></section>
+    <section id="v-ekle" class="view" aria-label="Yanlış ekle" hidden></section>
+    <section id="v-durum" class="view" aria-label="Durum" hidden></section>
+  </main>
+</div>
+
+<nav class="tabs" aria-label="Bölümler">
+  <div class="in">
+    <button class="tab" data-v="tekrar" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg>
+      Tekrar<span class="badge" id="badge" hidden></span>
+    </button>
+    <button class="tab" data-v="defter" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h12a2 2 0 0 1 2 2v16H7a2 2 0 0 1-2-2z"/><path d="M5 17a2 2 0 0 1 2-2h12"/><path d="M9 7h6"/></svg>
+      Defter
+    </button>
+    <button class="tab" data-v="ekle" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M12 8v8M8 12h8"/></svg>
+      Ekle
+    </button>
+    <button class="tab" data-v="durum" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+      Durum
+    </button>
+  </div>
+</nav>
+
+<div id="sheetWrap" class="overlay" hidden><div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Soru ayrıntısı"></div></div>
+<div id="lightbox" hidden><img alt="Soru fotoğrafı büyük" draggable="false"><button class="iconbtn lb-close" type="button" id="lb-close" aria-label="Kapat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button><p class="lb-hint">İki parmakla büyütüp küçültebilirsin.</p></div>
+<div id="editor" class="editor" hidden role="dialog" aria-modal="true" aria-label="Fotoğrafı temizle">
+  <div class="ed-top"><h2>Fotoğrafı temizle</h2>
+    <div class="ed-topbtns">
+      <button class="iconbtn" type="button" id="ed-rotl" aria-label="Sola döndür" title="Sola döndür"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4v6h6"/><path d="M3.5 13.5A8.5 8.5 0 1 0 6 6.6L3 10"/></svg></button>
+      <button class="iconbtn" type="button" id="ed-rotr" aria-label="Sağa döndür" title="Sağa döndür"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 4v6h-6"/><path d="M20.5 13.5A8.5 8.5 0 1 1 18 6.6L21 10"/></svg></button>
+      <button class="btn ghost" type="button" id="ed-cancel" style="min-height:40px;padding:6px 14px">Vazgeç</button>
+    </div>
+  </div>
+  <div class="ed-stage" id="ed-stage"><canvas id="ed-canvas" aria-label="Fotoğraf önizleme"></canvas><div class="ed-busy" id="ed-busy" hidden><span id="ed-busy-text">Hazırlanıyor…</span><button class="linkbtn" type="button" id="ed-busy-stop" hidden>Vazgeç</button></div><div class="ed-zoom" role="group" aria-label="Yakınlaştırma"><button class="iconbtn" type="button" id="ed-zout" aria-label="Uzaklaştır"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12"/></svg></button><button class="iconbtn" type="button" id="ed-zfit" aria-label="Tamamını göster" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button><button class="iconbtn" type="button" id="ed-zin" aria-label="Yakınlaştır"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 12h12M12 6v12"/></svg></button></div></div>
+  <div class="ed-tools">
+    <div class="seg" role="group" aria-label="Araç">
+      <button type="button" data-m="clean" aria-pressed="true">Temizle</button>
+      <button type="button" data-m="erase" aria-pressed="false">Silgi</button>
+      <button type="button" data-m="crop" aria-pressed="false">Kırp</button>
+    </div>
+    <div id="p-clean" class="fgroup">
+      <div class="ai-box" id="ed-ai-box">
+        <button class="btn ai block" type="button" id="ed-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>Yapay zekâ ile izleri bul</button>
+        <p class="ed-hint" id="ed-ai-hint">İnternet varken çalışır. En iyi sonuç için önce <b>Kırp</b> ile sadece soruyu bırak.</p>
+      </div>
+      <div class="ai-review" id="ed-ai-review" hidden>
+        <p id="ed-ai-msg"></p>
+        <div class="ed-row"><button class="btn ghost" type="button" id="ed-ai-cancel">Vazgeç</button><button class="btn primary" type="button" id="ed-ai-apply">İzleri sil</button></div>
+      </div>
+      <div class="ctl"><label for="ed-pencil">Silik kalem izlerini sil</label><input type="checkbox" id="ed-pencil"><input type="range" id="ed-pencilStr" min="0" max="100" aria-label="Silik iz silme gücü"></div>
+      <div class="ctl"><label for="ed-scan">Gölgeleri sil, kâğıdı beyazlat</label><input type="checkbox" id="ed-scan"></div>
+      <div class="ctl"><label for="ed-color">Tükenmez / renkli kalem izlerini sil</label><input type="checkbox" id="ed-color"><input type="range" id="ed-colorStr" min="0" max="100" aria-label="Renkli kalem silme gücü"></div>
+      <p class="ed-hint">Otomatik temizleme yalnızca silik izleri siler, sorunun yazısına dokunmaz. Kalan izleri <b>Silgi → Dokunarak sil</b> ile tek dokunuşta sil. Büyütmek için iki parmağını aç.</p>
+    </div>
+    <div id="p-erase" class="fgroup" hidden>
+      <div class="seg two" id="ed-tools" role="group" aria-label="Silgi türü">
+        <button type="button" data-tool="tap" aria-pressed="true">Dokunarak sil</button>
+        <button type="button" data-tool="brush" aria-pressed="false">Fırça</button>
+      </div>
+      <p class="ed-hint" id="ed-hint-tap">İzin üzerine dokun, o iz bütünüyle silinir; değdiği yazı yerinde kalır. Bir parçası kalırsa ona da dokun. Büyütmek için iki parmağını aç, kaydırmak için tek parmakla sürükle.</p>
+      <p class="ed-hint" id="ed-hint-brush" hidden>Parmağınla izin üzerinden geç; fırçanın değdiği her yer silinir. İnce iş için önce yakınlaştır. İki parmakla büyütüp kaydırabilirsin.</p>
+      <div class="ctl" id="ed-brushrow" hidden><label for="ed-brush">Fırça boyutu</label><span></span><input type="range" id="ed-brush" min="6" max="60"></div>
+      <div class="ed-row"><button class="btn ghost" type="button" id="ed-undo">Geri al</button><button class="btn ghost" type="button" id="ed-clear">Silgiyi temizle</button></div>
+    </div>
+    <div id="p-crop" class="fgroup" hidden>
+      <p class="ed-hint">Sorunun çevresine parmağınla bir kutu çiz, sonra Kırp’a bas.</p>
+      <div class="ed-row"><button class="btn ghost" type="button" id="ed-uncrop">Tüm fotoğraf</button><button class="btn primary" type="button" id="ed-docrop">Kırp</button></div>
+    </div>
+    <div class="ed-bottom"><button class="btn ghost" type="button" id="ed-orig" aria-label="Basılı tutunca orijinali gösterir">Orijinal</button><button class="btn primary" type="button" id="ed-use">Bu hâliyle kullan</button></div>
+  </div>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+"use strict";
+var SUBJECTS=[{k:"mat",n:"Matematik"},{k:"fen",n:"Fen Bilimleri"},{k:"tr",n:"Türkçe"},{k:"par",n:"Paragraf"},{k:"din",n:"Din Kültürü"},{k:"sos",n:"Sosyal Bilgiler"},{k:"ing",n:"İngilizce"}];
+var REASONS=[{k:"bilgi",n:"Konuyu bilmiyordum"},{k:"dikkat",n:"Dikkatsizlik"},{k:"islem",n:"İşlem hatası"},{k:"okuma",n:"Soruyu yanlış okudum"},{k:"sure",n:"Süre yetmedi"},{k:"tahmin",n:"Tahminle işaretledim"}];
+var TIPS={
+  bilgi:"En çok konu eksiğinden yanlış çıkıyor. Bu konuların özetini bir kez daha oku, sonra az ama dikkatli soru çöz.",
+  dikkat:"Dikkat hataları öne çıkıyor. Soru kökündeki “değildir, yanlıştır, en az” gibi ifadelerin altını çiz.",
+  islem:"İşlem hataları çok. İşlemi kenara düzenli yaz ve sonucu soruya geri koyarak kontrol et.",
+  okuma:"Soruyu yanlış okuma sık oluyor. Soruyu sonuna kadar okumadan şıklara bakma.",
+  sure:"Süre yetmiyor. Önce kolay soruları çöz, takıldığın soruyu işaretleyip sona bırak.",
+  tahmin:"Tahminle işaretleme çok. Emin olmadığın her soruyu bu deftere ekle; tekrarla kalıcı olur."
+};
+var INTERVALS=[1,3,7,15,30];
+var MONTHS=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
+var DAYS=["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
+var VIEWS=["tekrar","defter","ekle","durum"];
+
+var db=null, assets=null, col=null, readOnly=false, storeState="loading", items=[];
+var view="tekrar", revealed=null, sheetId=null, confirmDel=false, saving=false;
+var filt={sub:"all",status:"all",reason:"all",q:""};
+var form=blankForm();
+
+function blankForm(keep){
+  return {editing:null, sub:keep?keep.sub:null, topic:keep?keep.topic:"", source:keep?keep.source:lsGet("src")||"", note:"", mine:null, correct:null, reason:null, solution:"", qFile:null, sFile:null, qPhoto:null, sPhoto:null, qPrev:null, sPrev:null, qRaw:null, sRaw:null, qEd:null, sEd:null, qRawOrig:false, sRawOrig:false, oFile:null, oPhoto:null, ai:null};
+}
+function lsGet(k){try{return localStorage.getItem("yd_"+k)}catch(e){return null}}
+function lsSet(k,v){try{localStorage.setItem("yd_"+k,v)}catch(e){}}
+
+/* ---------- helpers ---------- */
+function $(s){return document.querySelector(s)}
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+function ymd(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0")}
+function todayStr(){return ymd(new Date())}
+function addDays(n){var d=new Date();d.setDate(d.getDate()+n);return ymd(d)}
+function parse(s){var p=s.split("-").map(Number);return new Date(p[0],p[1]-1,p[2])}
+function diffDays(s){return Math.round((parse(s)-parse(todayStr()))/86400000)}
+function fmtDate(s){if(!s)return "";var d=parse(s);return d.getDate()+" "+MONTHS[d.getMonth()]}
+function relDay(s){var n=diffDays(s);if(n<0)return (-n)+" gün gecikti";if(n===0)return "bugün";if(n===1)return "yarın";return n+" gün sonra"}
+function subj(k){for(var i=0;i<SUBJECTS.length;i++)if(SUBJECTS[i].k===k)return SUBJECTS[i];return {k:"x",n:"Ders"}}
+function reasonName(k){for(var i=0;i<REASONS.length;i++)if(REASONS[i].k===k)return REASONS[i].n;return ""}
+function subjChip(k){var s=subj(k);var c=el("span","chip dot",s.n);c.style.setProperty("--c","var(--s-"+s.k+")");return c}
+function photoSrc(p){if(!p)return null;if(p.id)return photoUrls[p.id]||null;if(p.data)return p.data;return null}
+function isDue(i){return !i.mastered&&i.next&&i.next<=todayStr()}
+function stagesEl(n){var w=el("span","stages");w.setAttribute("aria-label",(n||0)+" / 5 doğru tekrar");for(var i=0;i<5;i++){var d=el("i",i<(n||0)?"on":"");w.appendChild(d)}return w}
+function toast(msg){var t=$("#toast");t.textContent=msg;t.classList.add("show");clearTimeout(toast._t);toast._t=setTimeout(function(){t.classList.remove("show")},2600)}
+function dueList(){return items.filter(isDue).sort(function(a,b){return a.next<b.next?-1:a.next>b.next?1:(a.createdAt||0)-(b.createdAt||0)})}
+function btn(cls,text,fn){var b=el("button","btn "+cls,text);b.type="button";if(fn)b.addEventListener("click",fn);return b}
+
+/* ---------- navigation ---------- */
+function go(v){
+  if(VIEWS.indexOf(v)<0)v="tekrar";
+  view=v;
+  VIEWS.forEach(function(x){$("#v-"+x).hidden=(x!==v)});
+  document.querySelectorAll(".tab").forEach(function(t){if(t.dataset.v===v)t.setAttribute("aria-current","page");else t.removeAttribute("aria-current")});
+  try{history.replaceState(null,"","#"+v)}catch(e){}
+  render();
+  window.scrollTo(0,0);
+}
+document.querySelectorAll(".tab").forEach(function(t){t.addEventListener("click",function(){go(t.dataset.v)})});
+
+/* ---------- render ---------- */
+function render(fromData){
+  var d=new Date();
+  $("#today").textContent=DAYS[d.getDay()]+", "+d.getDate()+" "+MONTHS[d.getMonth()];
+  var n=dueList().length, b=$("#badge");
+  b.hidden=!n; b.textContent=n;
+  if(view==="tekrar")renderReview();
+  else if(view==="defter"){if(fromData&&$("#itemList"))drawItems();else renderList()}
+  else if(view==="ekle"){if(!(fromData&&$("#i-topic")))renderForm()}
+  else renderStats();
+  if(sheetId)renderSheet();
+}
+
+function storeNotice(box){
+  if(storeState==="loading"){box.appendChild(el("p","notice","Defter açılıyor…"));return true}
+  if(storeState==="none"){box.appendChild(el("p","notice","Bu tarayıcı kayıt saklamaya izin vermiyor. Uygulamayı gizli sekmede değil, normal tarayıcıda ya da ana ekrandaki simgesinden aç."));return true}
+  if(storeState==="error"){box.appendChild(el("p","notice","Defter şu an yüklenemedi. Sayfayı yenileyip tekrar deneyin."));return true}
+  return false;
+}
+
+function emptyIntro(box){
+  var c=el("div","card");
+  c.appendChild(el("h2",null,"Defterin henüz boş"));
+  c.appendChild(el("p","muted","Test çözerken yanlış yaptığın ya da boş bıraktığın soruları buraya ekle. Defter onları doğru zamanda yeniden karşına çıkarır."));
+  var ol=el("ol","steps");
+  ["Sorunun fotoğrafını çek, dersini ve konusunu seç.","Neden yanlış yaptığını işaretle, doğru çözümü not al.","Ertesi gün soru “Tekrar” bölümüne gelir. Kendin çöz, sonra cevaba bak.","Doğru çözdükçe soru 3, 7, 15 ve 30 gün sonra tekrar gelir. 5 kez doğru çözünce öğrenildi sayılır."].forEach(function(t){ol.appendChild(el("li",null,t))});
+  c.appendChild(ol);
+  if(!readOnly)c.appendChild(btn("primary block","İlk yanlışı ekle",function(){go("ekle")}));
+  if(view!=="durum")c.appendChild(btn("ghost block","Yedeğin varsa geri yükle",function(){go("durum")}));
+  box.appendChild(c);
+}
+
+function renderReview(){
+  var box=$("#v-tekrar");box.replaceChildren();
+  var wrap=el("div",null);wrap.style.cssText="display:flex;flex-direction:column;gap:16px";box.appendChild(wrap);
+  if(storeNotice(wrap))return;
+  if(!items.length){emptyIntro(wrap);return}
+  var due=dueList(), t=todayStr();
+  var doneToday=items.filter(function(i){return i.lastReview===t}).length;
+  var head=el("div","due-head");
+  head.appendChild(el("div","due-num",String(due.length)));
+  var tx=el("div","due-text");
+  tx.appendChild(el("b",null,due.length?"soru bugün tekrar bekliyor":"bugün bekleyen soru yok"));
+  tx.appendChild(el("span","muted small",doneToday?("Bugün "+doneToday+" soru tekrar edildi."):"Önce soruyu kendin çöz, sonra cevaba bak."));
+  head.appendChild(tx);wrap.appendChild(head);
+  var rem=backupReminder();if(rem)wrap.appendChild(rem);
+
+  if(!due.length){
+    var c=el("div","card");
+    c.appendChild(el("p","pen-note","Bugünlük tekrar tamam!"));
+    var upcoming=items.filter(function(i){return !i.mastered&&i.next}).sort(function(a,b){return a.next<b.next?-1:1});
+    if(upcoming.length){
+      var nx=upcoming[0].next, cnt=upcoming.filter(function(i){return i.next===nx}).length;
+      c.appendChild(el("p","muted","Sıradaki tekrar "+relDay(nx)+" ("+fmtDate(nx)+"): "+cnt+" soru."));
+    } else c.appendChild(el("p","muted","Bütün soruların öğrenildi. Yeni yanlışları eklemeye devam et."));
+    if(!readOnly)c.appendChild(btn("ghost block","Yeni yanlış ekle",function(){go("ekle")}));
+    wrap.appendChild(c);return;
+  }
+  var it=due[0];
+  wrap.appendChild(questionCard(it,{review:true,pos:"1 / "+due.length}));
+}
+
+function questionCard(it,o){
+  var show=!o.review||revealed===it.id;
+  var c=el("article","card");
+  var top=el("div","row between");
+  var l=el("div","row");l.appendChild(subjChip(it.subject));
+  if(it.source)l.appendChild(el("span","muted small",it.source));
+  top.appendChild(l);
+  var r=el("div","row");if(o.pos)r.appendChild(el("span","muted small",o.pos));r.appendChild(stagesEl(it.stage));
+  top.appendChild(r);c.appendChild(top);
+  c.appendChild(el("div","topic",it.topic||"Konu yazılmamış"));
+  var src=photoSrc(it.qPhoto);
+  if(src)c.appendChild(photoEl(src,"Soru fotoğrafı"));
+  if(it.note)c.appendChild(el("div","qtext",it.note));
+  if(!show){
+    c.appendChild(btn("primary block","Çözdüm, cevabı göster",function(){revealed=it.id;render()}));
+    return c;
+  }
+  var a=el("div","answers");
+  if(it.mine){var m=el("span","ans-mine","Senin cevabın: ");m.appendChild(it.mine==="bos"?el("span",null,"Boş"):el("s",null,it.mine.split(",").join(", ")));a.appendChild(m)}
+  if(it.correct){var rr=el("span","ans-right","Doğrusu: "+it.correct);a.appendChild(rr)}
+  if(a.childNodes.length)c.appendChild(a);
+  if(it.reason){var rw=el("div","row");rw.appendChild(el("span","muted small","Neden:"));var rc=el("span","chip",reasonName(it.reason));rc.style.setProperty("--c","var(--pen)");rw.appendChild(rc);c.appendChild(rw)}
+  if(it.solution)c.appendChild(el("div","solution",it.solution));
+  var o2=photoSrc(it.oPhoto);if(o2){c.appendChild(el("h3",null,"Kitaptaki işaretli hâli"));c.appendChild(photoEl(o2,"Sorunun işaretli hâli"))}
+  var s2=photoSrc(it.sPhoto);if(s2)c.appendChild(photoEl(s2,"Çözüm fotoğrafı"));
+  if(o.review){
+    if(readOnly){c.appendChild(el("p","notice small","Bu defteri yalnızca görüntüleyebiliyorsun."));return c}
+    var bs=el("div","btns");
+    bs.appendChild(btn("bad","Yine yapamadım",function(){grade(it,false)}));
+    bs.appendChild(btn("good","Doğru çözdüm",function(){grade(it,true)}));
+    c.appendChild(bs);
+  }
+  return c;
+}
+function photoEl(src,alt){
+  var b=el("button","photo");b.type="button";b.setAttribute("aria-label",alt+", büyütmek için dokun");
+  var im=el("img");im.src=src;im.alt=alt;im.loading="lazy";
+  im.onerror=function(){b.replaceChildren(el("div","notice small","Fotoğraf yüklenemedi."))};
+  b.appendChild(im);b.addEventListener("click",function(){openLightbox(src)});
+  return b;
+}
+
+/* ---------- list ---------- */
+function renderList(){
+  var box=$("#v-defter");box.replaceChildren();
+  var wrap=el("div",null);wrap.style.cssText="display:flex;flex-direction:column;gap:14px";box.appendChild(wrap);
+  var h=el("div","row between");h.appendChild(el("h2",null,"Tüm yanlışlar"));h.appendChild(el("span","muted small",items.length+" soru"));wrap.appendChild(h);
+  if(storeNotice(wrap))return;
+  if(!items.length){emptyIntro(wrap);return}
+  var f=el("div","filters");
+  var sc=el("div","scroller");
+  [{k:"all",n:"Tümü"}].concat(SUBJECTS).forEach(function(s){
+    var p=el("button","pick",s.n);p.type="button";p.setAttribute("aria-pressed",String(filt.sub===s.k));
+    if(s.k!=="all")p.style.setProperty("--c","var(--s-"+s.k+")");
+    p.addEventListener("click",function(){filt.sub=s.k;renderList()});sc.appendChild(p);
+  });
+  f.appendChild(sc);
+  var sel=el("div","selects");
+  var st=el("select","field");st.id="f-status";st.setAttribute("aria-label","Durum");
+  [["all","Her durum"],["due","Bugün tekrar"],["active","Tekrarda"],["mastered","Öğrenildi"]].forEach(function(o){var op=el("option",null,o[1]);op.value=o[0];st.appendChild(op)});
+  st.value=filt.status;st.addEventListener("change",function(){filt.status=st.value;renderList()});
+  var rs=el("select","field");rs.id="f-reason";rs.setAttribute("aria-label","Neden");
+  var op0=el("option",null,"Her neden");op0.value="all";rs.appendChild(op0);
+  REASONS.forEach(function(r){var op=el("option",null,r.n);op.value=r.k;rs.appendChild(op)});
+  rs.value=filt.reason;rs.addEventListener("change",function(){filt.reason=rs.value;renderList()});
+  sel.appendChild(st);sel.appendChild(rs);f.appendChild(sel);
+  var q=el("input","field");q.id="f-q";q.type="search";q.placeholder="Konu ya da kitap ara";q.value=filt.q;
+  q.addEventListener("input",function(){filt.q=q.value;drawItems()});
+  f.appendChild(q);
+  wrap.appendChild(f);
+  var list=el("div","items");list.id="itemList";wrap.appendChild(list);
+  drawItems();
+}
+function drawItems(){
+  var list=$("#itemList");if(!list)return;list.replaceChildren();
+  var q=filt.q.trim().toLocaleLowerCase("tr");
+  var rows=items.filter(function(i){
+    if(filt.sub!=="all"&&i.subject!==filt.sub)return false;
+    if(filt.reason!=="all"&&i.reason!==filt.reason)return false;
+    if(filt.status==="due"&&!isDue(i))return false;
+    if(filt.status==="active"&&i.mastered)return false;
+    if(filt.status==="mastered"&&!i.mastered)return false;
+    if(q&&((i.topic||"")+" "+(i.source||"")+" "+(i.note||"")).toLocaleLowerCase("tr").indexOf(q)<0)return false;
+    return true;
+  });
+  if(!rows.length){list.appendChild(el("p","notice","Bu seçime uyan soru yok."));return}
+  rows.forEach(function(i){
+    var b=el("button","item");b.type="button";
+    var th=el("div","thumb");var src=photoSrc(i.qPhoto);
+    if(src){var im=el("img");im.src=src;im.alt="";im.loading="lazy";im.onerror=function(){th.replaceChildren(document.createTextNode("?"))};th.appendChild(im)}else th.textContent="?";
+    b.appendChild(th);
+    var bd=el("div","item-body");
+    var r1=el("div","row");r1.appendChild(subjChip(i.subject));r1.appendChild(el("span","muted small",fmtDate(i.date)));bd.appendChild(r1);
+    bd.appendChild(el("div","item-topic",i.topic||"Konu yazılmamış"));
+    var r2=el("div","row");r2.appendChild(stagesEl(i.stage));
+    if(i.mastered)r2.appendChild(el("span","next done","Öğrenildi"));
+    else if(i.next)r2.appendChild(el("span","next"+(isDue(i)?" due":""),isDue(i)?"Bugün tekrar":"Tekrar: "+relDay(i.next)));
+    bd.appendChild(r2);b.appendChild(bd);
+    b.addEventListener("click",function(){openSheet(i.id)});
+    list.appendChild(b);
+  });
+}
+
+/* ---------- detail sheet ---------- */
+function openSheet(id){sheetId=id;confirmDel=false;$("#sheetWrap").hidden=false;renderSheet()}
+function closeSheet(){sheetId=null;$("#sheetWrap").hidden=true}
+$("#sheetWrap").addEventListener("click",function(e){if(e.target===this)closeSheet()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(ed)cancelEditor();else if(!$("#lightbox").hidden)closeLightbox();else if(sheetId)closeSheet()}});
+function renderSheet(){
+  var it=items.find(function(i){return i.id===sheetId});
+  var s=$("#sheet");s.replaceChildren();
+  if(!it){closeSheet();return}
+  s.appendChild(el("div","grab"));
+  s.appendChild(questionCard(it,{review:false}));
+  var m=el("div","meta card");
+  [["Eklendi",fmtDate(it.date)],["Yanlış sayısı",String(it.wrongCount||1)],["Tekrar sayısı",String(it.reviews||0)],["Sıradaki tekrar",it.mastered?"Öğrenildi":(it.next?fmtDate(it.next)+" ("+relDay(it.next)+")":"-")]].forEach(function(p){var d=el("div");d.appendChild(el("span",null,p[0]));d.appendChild(el("b",null,p[1]));m.appendChild(d)});
+  m.style.display="grid";
+  s.appendChild(m);
+  if(!readOnly){
+    var bs=el("div","btns");
+    bs.appendChild(btn("ghost","Düzenle",function(){startEdit(it)}));
+    if(it.mastered)bs.appendChild(btn("ghost","Tekrara al",function(){reopen(it)}));
+    else bs.appendChild(btn("ghost","Bugün tekrar et",function(){reopen(it)}));
+    s.appendChild(bs);
+    if(!confirmDel)s.appendChild(btn("danger block","Sil",function(){confirmDel=true;renderSheet()}));
+    else{
+      var cf=el("div","confirm");cf.appendChild(el("b",null,"Bu soru defterden silinsin mi? Geri alınamaz."));
+      var cb=el("div","btns");cb.appendChild(btn("ghost","Vazgeç",function(){confirmDel=false;renderSheet()}));cb.appendChild(btn("bad","Evet, sil",function(){del(it)}));
+      cf.appendChild(cb);s.appendChild(cf);
+    }
+  }
+  s.appendChild(btn("ghost block","Kapat",closeSheet));
+}
+
+/* ---------- writes ---------- */
+function writeErr(e){
+  var code=e&&e.code;
+  if(code==="invalid_argument"){readOnly=true;toast("Bu defteri değiştirme iznin yok.");render();return}
+  if(code==="quota_exceeded"){toast("Defterin kapasitesi doldu. Öğrenilmiş eski soruları silerek yer açabilirsin.");return}
+  toast("Kaydedilemedi. Bağlantını kontrol edip tekrar dene.");
+}
+function grade(it,ok){
+  var t=todayStr(), patch;
+  if(ok){var st=(it.stage||0)+1;patch=st>=5?{stage:5,mastered:true,next:null}:{stage:st,next:addDays(INTERVALS[st])}}
+  else patch={stage:0,next:addDays(1),wrongCount:(it.wrongCount||1)+1};
+  patch.lastReview=t;patch.reviews=(it.reviews||0)+1;
+  revealed=null;
+  col.doc(it.id).update(patch).then(function(){
+    toast(ok?(patch.mastered?"Harika! Bu soru artık öğrenildi.":"Süper! Bu soru "+relDay(patch.next)+" tekrar gelecek."):"Sorun değil. Çözümü bir daha oku, yarın yeniden karşına çıkacak.");
+  },writeErr);
+}
+function reopen(it){
+  col.doc(it.id).update({mastered:false,stage:it.mastered?0:(it.stage||0),next:todayStr()}).then(function(){toast("Soru bugünkü tekrara eklendi.");closeSheet()},writeErr);
+}
+function del(it){
+  var ids=[it.qPhoto&&it.qPhoto.id,it.oPhoto&&it.oPhoto.id,it.sPhoto&&it.sPhoto.id].filter(Boolean);
+  col.doc(it.id).delete().then(function(){
+    closeSheet();toast("Soru silindi.");
+    if(assets)ids.forEach(function(id){assets.delete(id).catch(function(){})});
+  },writeErr);
+}
+
+/* ---------- photos ---------- */
+function shrink(file,max,q){
+  return new Promise(function(res,rej){
+    var url=URL.createObjectURL(file),img=new Image();
+    img.onload=function(){
+      var w=img.naturalWidth,h=img.naturalHeight,s=Math.min(1,max/Math.max(w,h));
+      w=Math.max(1,Math.round(w*s));h=Math.max(1,Math.round(h*s));
+      var c=document.createElement("canvas");c.width=w;c.height=h;var x=c.getContext("2d");
+      x.fillStyle="#fff";x.fillRect(0,0,w,h);x.drawImage(img,0,0,w,h);URL.revokeObjectURL(url);
+      c.toBlob(function(b){b?res(b):rej(new Error("blob"))},"image/jpeg",q);
+    };
+    img.onerror=function(){URL.revokeObjectURL(url);rej(new Error("img"))};
+    img.src=url;
+  });
+}
+function toDataURL(blob){return new Promise(function(res,rej){var r=new FileReader();r.onload=function(){res(r.result)};r.onerror=rej;r.readAsDataURL(blob)})}
+async function storePhoto(file){var b=await shrink(file,1500,.8);var r=await assets.upload(b);return {id:r.id}}
+
+/* ---------- form ---------- */
+function startEdit(it){
+  form=blankForm();
+  form.editing=it.id;form.sub=it.subject;form.topic=it.topic||"";form.source=it.source||"";form.note=it.note||"";
+  form.mine=it.mine||null;form.correct=it.correct||null;form.reason=it.reason||null;form.solution=it.solution||"";
+  form.qPhoto=it.qPhoto||null;form.sPhoto=it.sPhoto||null;form.oPhoto=it.oPhoto||null;
+  closeSheet();go("ekle");
+}
+function uniq(arr){var o={},r=[];arr.forEach(function(v){v=(v||"").trim();if(v&&!o[v.toLocaleLowerCase("tr")]){o[v.toLocaleLowerCase("tr")]=1;r.push(v)}});return r}
+function renderForm(){
+  var ae=document.activeElement,fid=ae&&ae.id&&/^i-/.test(ae.id)?ae.id:null,ss=null,se=null;
+  if(fid){try{ss=ae.selectionStart;se=ae.selectionEnd}catch(_){}}
+  renderFormInner();
+  if(fid){var n=document.getElementById(fid);if(n){n.focus({preventScroll:true});try{if(ss!=null)n.setSelectionRange(ss,se)}catch(_){}}}
+}
+function renderFormInner(){
+  var box=$("#v-ekle");box.replaceChildren();
+  var wrap=el("div",null);wrap.style.cssText="display:flex;flex-direction:column;gap:14px";box.appendChild(wrap);
+  wrap.appendChild(el("h2",null,form.editing?"Soruyu düzenle":"Yeni yanlış ekle"));
+  if(storeNotice(wrap))return;
+  if(readOnly){wrap.appendChild(el("p","notice","Bu defteri yalnızca görüntüleyebiliyorsun; yeni soru ekleyemezsin."));return}
+  var c=el("form","card");c.noValidate=true;c.addEventListener("submit",function(e){e.preventDefault();save()});
+
+  // ders
+  var g1=group("Ders");var ch=el("div","wrapchips");
+  SUBJECTS.forEach(function(s){var p=el("button","pick",s.n);p.type="button";p.style.setProperty("--c","var(--s-"+s.k+")");p.setAttribute("aria-pressed",String(form.sub===s.k));
+    p.addEventListener("click",function(){form.sub=s.k;renderForm()});ch.appendChild(p)});
+  g1.appendChild(ch);c.appendChild(g1);
+
+  // konu + kaynak
+  var two=el("div","two");
+  var g2=group("Konu");var ti=el("input","field");ti.id="i-topic";ti.placeholder="Örn. Rasyonel sayılarla işlemler";ti.value=form.topic;ti.setAttribute("list","dl-topic");
+  ti.addEventListener("input",function(){form.topic=ti.value});
+  var dl=el("datalist");dl.id="dl-topic";uniq(items.filter(function(i){return !form.sub||i.subject===form.sub}).map(function(i){return i.topic})).forEach(function(t){var o=el("option");o.value=t;dl.appendChild(o)});
+  g2.appendChild(ti);g2.appendChild(dl);two.appendChild(g2);
+  var g3=group("Kitap / test",true);var si=el("input","field");si.id="i-source";si.placeholder="Örn. Deneme 4, s. 32";si.value=form.source;si.setAttribute("list","dl-src");
+  si.addEventListener("input",function(){form.source=si.value});
+  var dl2=el("datalist");dl2.id="dl-src";uniq(items.map(function(i){return i.source})).forEach(function(t){var o=el("option");o.value=t;dl2.appendChild(o)});
+  g3.appendChild(si);g3.appendChild(dl2);two.appendChild(g3);
+  c.appendChild(two);
+
+  // soru fotoğrafı
+  var g4=group("Sorunun fotoğrafı");g4.appendChild(dropZone("q"));var an=aiNotice();if(an)g4.appendChild(an);c.appendChild(g4);
+  var g5=group("Soru notu",true);var nt=el("textarea","field");nt.id="i-note";nt.placeholder="Fotoğraf yoksa soruyu kısaca yaz ya da sorunun önemli kısmını not al.";nt.value=form.note;nt.addEventListener("input",function(){form.note=nt.value});
+  g5.appendChild(nt);c.appendChild(g5);
+
+  // cevaplar
+  var two2=el("div","two");
+  var g6=group("Benim cevabım",true);g6.appendChild(letters("mine",["A","B","C","D","bos"]));two2.appendChild(g6);
+  var g7=group("Doğru cevap",true);g7.appendChild(letters("correct",["A","B","C","D"]));two2.appendChild(g7);
+  c.appendChild(two2);
+
+  // neden
+  var g8=group("Neden yanlış yaptım?");var rc=el("div","wrapchips");
+  REASONS.forEach(function(r){var p=el("button","pick",r.n);p.type="button";p.style.setProperty("--c","var(--pen)");p.setAttribute("aria-pressed",String(form.reason===r.k));
+    p.addEventListener("click",function(){form.reason=form.reason===r.k?null:r.k;renderForm()});rc.appendChild(p)});
+  g8.appendChild(rc);c.appendChild(g8);
+
+  // çözüm
+  var g9=group("Doğru çözüm / öğrendiğim şey",true);var so=el("textarea","field");so.id="i-solution";so.placeholder="Örn. Negatif sayıyı çarparken işareti unuttum. (−)·(−) = (+)";so.value=form.solution;so.addEventListener("input",function(){form.solution=so.value});
+  g9.appendChild(so);g9.appendChild(dropZone("s"));c.appendChild(g9);
+
+  var sb=el("button","btn primary block",saving?"Kaydediliyor…":(form.editing?"Değişiklikleri kaydet":"Deftere ekle"));sb.type="submit";sb.disabled=saving;
+  c.appendChild(sb);
+  if(form.editing)c.appendChild(btn("ghost block","Vazgeç",function(){form=blankForm();go("defter")}));
+  wrap.appendChild(c);
+}
+function group(label,optional){var g=el("div","fgroup");var l=el("div","flabel",label+" ");if(optional)l.appendChild(el("em",null,"(isteğe bağlı)"));g.appendChild(l);return g}
+function letters(key,opts){
+  var w=el("div","letters");
+  var cur=(form[key]||"").split(",").filter(Boolean);
+  if(cur.indexOf("E")>=0&&opts.indexOf("E")<0)opts.splice(4,0,"E");
+  opts.forEach(function(o){var b=el("button","letter"+(o==="bos"?" wide":"")+(key==="correct"?" right":""),o==="bos"?"Boş":o);b.type="button";b.setAttribute("aria-pressed",String(cur.indexOf(o)>=0));
+    b.setAttribute("aria-label",(key==="mine"?"Benim cevabım ":"Doğru cevap ")+(o==="bos"?"boş":o));
+    b.addEventListener("click",function(){
+      if(key==="correct"||o==="bos")form[key]=form[key]===o?null:o;
+      else{var c=cur.filter(function(x){return x!=="bos"});var i=c.indexOf(o);if(i>=0)c.splice(i,1);else c.push(o);c.sort();form[key]=c.length?c.join(","):null}
+      renderForm()});
+    w.appendChild(b)});
+  return w;
+}
+var CAM_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+var GAL_SVG='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><circle cx="9" cy="10" r="1.8"/><path d="M21 16l-5-5-8 8"/></svg>';
+function gotPhoto(k,f){
+  form[k+"Raw"]=f;form[k+"RawOrig"]=true;form[k+"Ed"]=null;form[k+"File"]=null;
+  if(k==="q"){form.oFile=null;form.oPhoto=null;form.ai=null}
+  if(form[k+"Prev"])URL.revokeObjectURL(form[k+"Prev"]);form[k+"Prev"]=null;
+  if(k==="q"){renderForm();openEditor("q")}
+  else{form.sFile=f;form.sPrev=URL.createObjectURL(f);renderForm()}
+}
+function photoInput(id,k,camera){
+  var inp=el("input");inp.type="file";inp.accept="image/*";inp.id=id;inp.hidden=true;inp.tabIndex=-1;
+  if(camera)inp.setAttribute("capture","environment");
+  inp.addEventListener("change",function(){var f=inp.files&&inp.files[0];inp.value="";if(f)gotPhoto(k,f)});
+  return inp;
+}
+function iconBtn(cls,svg,text,fn){var b=el("button","btn "+cls);b.type="button";b.innerHTML=svg;b.appendChild(document.createTextNode(text));b.addEventListener("click",fn);return b}
+function dropZone(k){
+  var holder=el("div","fgroup");
+  var cam=photoInput("cam-"+k,k,true),gal=photoInput("file-"+k,k,false);
+  holder.appendChild(cam);holder.appendChild(gal);
+  var box=el("div","drop");
+  var prev=form[k+"Prev"]||photoSrc(form[k+"Photo"]);
+  if(prev){
+    var im=el("img");im.src=prev;im.alt=k==="q"?"Soru fotoğrafı önizleme":"Çözüm fotoğrafı önizleme";box.appendChild(im);
+  }else{
+    box.appendChild(el("span","big",k==="q"?"Sorunun fotoğrafı":"Çözüm fotoğrafı"));
+    box.appendChild(el("span","small",k==="q"?"Soruyu yakından ve ışık alacak şekilde çek.":"Defterdeki çözümün fotoğrafı (isteğe bağlı)"));
+  }
+  var row=el("div","pick-row");
+  row.appendChild(iconBtn(prev||k==="s"?"ghost":"primary",CAM_SVG,prev?"Yeniden çek":"Fotoğraf çek",function(){cam.click()}));
+  row.appendChild(iconBtn("ghost",GAL_SVG,"Galeriden seç",function(){gal.click()}));
+  box.appendChild(row);holder.appendChild(box);
+  if(prev){
+    var acts=el("div","photo-actions");
+    var ce=el("button","linkbtn",k==="q"?"Temizle / kırp":"Kırp / düzenle");ce.type="button";ce.addEventListener("click",function(){openEditor(k)});acts.appendChild(ce);
+    var rm=el("button","linkbtn","Fotoğrafı kaldır");rm.type="button";rm.addEventListener("click",function(){form[k+"File"]=null;form[k+"Photo"]=null;form[k+"Raw"]=null;form[k+"RawOrig"]=false;form[k+"Ed"]=null;if(k==="q"){form.oFile=null;form.oPhoto=null;form.ai=null}if(form[k+"Prev"])URL.revokeObjectURL(form[k+"Prev"]);form[k+"Prev"]=null;renderForm()});acts.appendChild(rm);
+    holder.appendChild(acts);
+  }
+  return holder;
+}
+async function save(){
+  if(saving)return;
+  if(!form.sub){toast("Önce dersi seç.");return}
+  if(!form.topic.trim()){toast("Konuyu yaz.");var t=$("#i-topic");if(t)t.focus();return}
+  if(!form.qFile&&!form.qPhoto&&!form.note.trim()){toast("Sorunun fotoğrafını ekle ya da soru notunu yaz.");return}
+  saving=true;renderForm();
+  try{
+    var qP=form.qPhoto,sP=form.sPhoto,oP=form.oPhoto;
+    if(form.qFile)qP=await storePhoto(form.qFile);
+    if(form.oFile)oP=await storePhoto(form.oFile);
+    if(form.sFile)sP=await storePhoto(form.sFile);
+    if(!qP)oP=null;
+    var body={subject:form.sub,topic:form.topic.trim(),source:form.source.trim(),note:form.note.trim(),mine:form.mine,correct:form.correct,reason:form.reason,solution:form.solution.trim(),qPhoto:qP||null,oPhoto:oP||null,sPhoto:sP||null};
+    lsSet("src",body.source);
+    if(form.editing){
+      var old=items.find(function(i){return i.id===form.editing})||{};
+      var full={};Object.keys(old).forEach(function(k){if(k!=="id")full[k]=old[k]});Object.keys(body).forEach(function(k){full[k]=body[k]});
+      await col.doc(form.editing).set(full);
+      if(assets)["q","o","s"].forEach(function(k){var o=old[k+"Photo"],n=body[k+"Photo"];if(o&&o.id&&(!n||n.id!==o.id))assets.delete(o.id).catch(function(){})});
+      saving=false;form=blankForm();toast("Değişiklikler kaydedildi.");go("defter");
+    }else{
+      body.createdAt=Date.now();body.date=todayStr();body.stage=0;body.next=addDays(1);body.mastered=false;body.wrongCount=1;body.reviews=0;
+      await col.add(body);
+      saving=false;
+      if(form.qPrev)URL.revokeObjectURL(form.qPrev);if(form.sPrev)URL.revokeObjectURL(form.sPrev);
+      form=blankForm({sub:body.subject,topic:"",source:body.source});
+      toast("Deftere eklendi. Yarın tekrar karşına çıkacak.");renderForm();window.scrollTo(0,0);
+    }
+  }catch(e){saving=false;renderForm();writeErr(e)}
+}
+
+/* ---------- photo cleaner ---------- */
+var ed=null, edOrig=document.createElement("canvas"), edProc=document.createElement("canvas"), cv=$("#ed-canvas");
+function clamp(v,a,b){return Math.max(a,Math.min(b,v))}
+function edDefaults(on){return {colorOn:false,colorStr:55,scanOn:on,pencilOn:on,faint:40,rot:0,strokes:[],crop:null,brush:22,tool:"tap"}}
+function buildOrig(){
+  var img=ed.img,rot=ed.s.rot||0,w0=img.naturalWidth,h0=img.naturalHeight,sc=Math.min(1,1400/Math.max(w0,h0));
+  var w=Math.max(1,Math.round(w0*sc)),h=Math.max(1,Math.round(h0*sc)),W=rot%2?h:w,H=rot%2?w:h;
+  edOrig.width=edProc.width=W;edOrig.height=edProc.height=H;
+  var x=edOrig.getContext("2d");x.fillStyle="#fff";x.fillRect(0,0,W,H);
+  x.save();x.translate(W/2,H/2);x.rotate(rot*Math.PI/2);x.drawImage(img,-w/2,-h/2,w,h);x.restore();
+  ed.W=W;ed.H=H;ed.bg=null;
+}
+function loadImg(raw){
+  return new Promise(function(res,rej){
+    var img=new Image(),url=null;
+    img.onload=function(){if(url)URL.revokeObjectURL(url);res(img)};
+    img.onerror=function(){if(url)URL.revokeObjectURL(url);rej(new Error("img"))};
+    if(typeof raw==="string")img.src=raw;else{url=URL.createObjectURL(raw);img.src=url}
+  });
+}
+async function openEditor(k){
+  var raw=form[k+"Raw"],isOrig=!!form[k+"RawOrig"];
+  if(!raw&&k==="q"&&form.oPhoto){raw=photoSrc(form.oPhoto);isOrig=true}
+  if(!raw){raw=photoSrc(form[k+"Photo"]);isOrig=false}
+  if(!raw)return;
+  var st=Object.assign(edDefaults(false),form[k+"Ed"]?JSON.parse(JSON.stringify(form[k+"Ed"])):edDefaults(k==="q"&&isOrig));
+  ed={k:k,raw:raw,isOrig:isOrig,s:st,mode:"clean",draft:null,showOrig:false,drawing:null,cropStart:null,tapStart:null,bg:null,W:0,H:0};
+  $("#editor").hidden=false;$("#ed-busy").hidden=false;
+  cv.width=1;cv.height=1;edZoom.reset();syncControls();setMode("clean");
+  try{
+    var img=await loadImg(raw);if(!ed)return;
+    ed.img=img;buildOrig();
+    process();$("#ed-busy").hidden=true;draw();
+  }catch(e){closeEditor();toast("Fotoğraf açılamadı. Başka bir fotoğraf dene.")}
+}
+
+/* Paper brightness estimate: average on a coarse grid, take the brightest cell nearby
+   (so coloured figures and dark text are not mistaken for paper), smooth, scale up. */
+function background(){
+  if(ed.bg)return ed.bg;
+  var W=ed.W,H=ed.H,sw=Math.max(8,Math.round(W/16)),sh=Math.max(8,Math.round(H/16));
+  var sm=document.createElement("canvas");sm.width=sw;sm.height=sh;var sx=sm.getContext("2d",{willReadFrequently:true});
+  sx.imageSmoothingEnabled=true;sx.imageSmoothingQuality="high";sx.drawImage(edOrig,0,0,sw,sh);
+  var si=sx.getImageData(0,0,sw,sh),a=si.data,mx=new Uint8ClampedArray(a.length),G=2,x,y,c,dx,dy;
+  for(y=0;y<sh;y++)for(x=0;x<sw;x++)for(c=0;c<3;c++){
+    var m=0;
+    for(dy=-G;dy<=G;dy++){var yy=y+dy;if(yy<0||yy>=sh)continue;for(dx=-G;dx<=G;dx++){var xx=x+dx;if(xx<0||xx>=sw)continue;var v=a[(yy*sw+xx)*4+c];if(v>m)m=v}}
+    mx[(y*sw+x)*4+c]=m;
+  }
+  for(y=0;y<sh;y++)for(x=0;x<sw;x++){
+    for(c=0;c<3;c++){var sum=0,n=0;for(dy=-1;dy<=1;dy++){var y2=y+dy;if(y2<0||y2>=sh)continue;for(dx=-1;dx<=1;dx++){var x2=x+dx;if(x2<0||x2>=sw)continue;sum+=mx[(y2*sw+x2)*4+c];n++}}a[(y*sw+x)*4+c]=sum/n}
+    a[(y*sw+x)*4+3]=255;
+  }
+  sx.putImageData(si,0,0);
+  var bc=document.createElement("canvas");bc.width=W;bc.height=H;var bx=bc.getContext("2d",{willReadFrequently:true});
+  bx.imageSmoothingEnabled=true;bx.imageSmoothingQuality="high";bx.drawImage(sm,0,0,W,H);
+  ed.bg=bx.getImageData(0,0,W,H).data;return ed.bg;
+}
+
+/* Small image helpers on one-channel arrays. */
+function minFilter(src,W,H,r){
+  var tmp=new Uint8Array(src.length),out=new Uint8Array(src.length),x,y,k,m,row;
+  for(y=0;y<H;y++){row=y*W;for(x=0;x<W;x++){m=255;for(k=-r;k<=r;k++){var xx=x+k;if(xx<0||xx>=W)continue;var v=src[row+xx];if(v<m)m=v}tmp[row+x]=m}}
+  for(y=0;y<H;y++)for(x=0;x<W;x++){m=255;for(k=-r;k<=r;k++){var yy=y+k;if(yy<0||yy>=H)continue;var v2=tmp[yy*W+x];if(v2<m)m=v2}out[y*W+x]=m}
+  return out;
+}
+function boxBlur3(src,W,H){
+  var tmp=new Uint16Array(src.length),out=new Uint8Array(src.length),x,y,i;
+  for(y=0;y<H;y++){var row=y*W;for(x=0;x<W;x++){i=row+x;var s=src[i],c=1;if(x>0){s+=src[i-1];c++}if(x<W-1){s+=src[i+1];c++}tmp[i]=s*3/c}}
+  for(y=0;y<H;y++)for(x=0;x<W;x++){i=y*W+x;var s2=tmp[i],c2=1;if(y>0){s2+=tmp[i-W];c2++}if(y<H-1){s2+=tmp[i+W];c2++}out[i]=s2/(3*c2)}
+  return out;
+}
+/* Grow a 0/1 mask by r pixels (square), inside the window [x0,x1)x[y0,y1). */
+function dilate(m,W,H,r,x0,y0,x1,y1){
+  var ww=x1-x0,wh=y1-y0,tmp=new Uint8Array(ww*wh),out=new Uint8Array(ww*wh),x,y,k;
+  for(y=0;y<wh;y++){var row=(y+y0)*W;for(x=0;x<ww;x++){var gx=x+x0,v=0;for(k=-r;k<=r&&!v;k++){var xx=gx+k;if(xx>=0&&xx<W&&m[row+xx])v=1}tmp[y*ww+x]=v}}
+  for(y=0;y<wh;y++)for(x=0;x<ww;x++){var v2=0;for(k=-r;k<=r&&!v2;k++){var yy=y+k;if(yy>=0&&yy<wh&&tmp[yy*ww+x])v2=1}out[y*ww+x]=v2}
+  return out;
+}
+
+/* Summed-area table of a one-channel array (optionally only where mask is set). */
+function integral(src,W,H,mask){
+  var I=new Uint32Array((W+1)*(H+1)),x,y;
+  for(y=0;y<H;y++){var s=0,row=y*W,o=(y+1)*(W+1),po=y*(W+1);for(x=0;x<W;x++){var v=mask?(mask[row+x]?(src?src[row+x]:1):0):src[row+x];s+=v;I[o+x+1]=I[po+x+1]+s}}
+  return I;
+}
+function boxSum(I,W,H,x,y,r){
+  var x0=Math.max(0,x-r),y0=Math.max(0,y-r),x1=Math.min(W,x+r+1),y1=Math.min(H,y+r+1),w=W+1;
+  return I[y1*w+x1]-I[y0*w+x1]-I[y1*w+x0]+I[y0*w+x0];
+}
+
+/* Find the ink marks on the page. A pixel is ink when it is clearly darker than its
+   surroundings (so flat areas such as a pale blue ball are not ink, but a pencil line
+   across it is), or when it is simply dark. Touching ink pixels form one mark; each mark
+   gets a "core" darkness and the brightness of what surrounds it. Printed letters are
+   the most common marks, so their darkness tells how dark print looks in this photo. */
+function analyse(nd,W,H){
+  var n=W*H,lum=new Uint8Array(n),ink=new Uint8Array(n),i,p,x,y;
+  for(i=0,p=0;i<n;i++,p+=4)lum[i]=(nd[p]+nd[p+1]+nd[p+2])/3;
+  var IL=integral(lum,W,H),R=7;
+  for(y=0;y<H;y++)for(x=0;x<W;x++){
+    i=y*W+x;var x0=Math.max(0,x-R),y0=Math.max(0,y-R),x1=Math.min(W,x+R+1),y1=Math.min(H,y+R+1),w=W+1;
+    var mean=(IL[y1*w+x1]-IL[y0*w+x1]-IL[y1*w+x0]+IL[y0*w+x0])/((x1-x0)*(y1-y0));
+    if(lum[i]<mean-14||lum[i]<110)ink[i]=1;
+  }
+  IL=null;
+  var blur=boxBlur3(lum,W,H),lmin=minFilter(lum,W,H,1);
+  var lab=new Int32Array(n),parent=[0],next=1,nb,l;
+  function find(a){while(parent[a]!==a){parent[a]=parent[parent[a]];a=parent[a]}return a}
+  function join(a,b){a=find(a);b=find(b);if(a!==b){if(a<b)parent[b]=a;else parent[a]=b}}
+  for(y=0;y<H;y++){
+    var row=y*W;
+    for(x=0;x<W;x++){
+      i=row+x;if(!ink[i])continue;l=0;
+      if(x>0&&(nb=lab[i-1]))l=nb;
+      if(y>0){
+        if(x>0&&(nb=lab[i-W-1])){if(l)join(l,nb);else l=nb}
+        if((nb=lab[i-W])){if(l)join(l,nb);else l=nb}
+        if(x<W-1&&(nb=lab[i-W+1])){if(l)join(l,nb);else l=nb}
+      }
+      if(!l){l=next++;parent.push(l)}
+      lab[i]=l;
+    }
+  }
+  var map=new Int32Array(next),cnt=0,k;
+  for(k=1;k<next;k++){var rt=find(k);if(!map[rt])map[rt]=++cnt;map[k]=map[rt]}
+  parent=null;
+  /* not-ink = more than one pixel away from any ink; used to sample what surrounds a mark */
+  var near=dilate(ink,W,H,1,0,0,W,H),clear=new Uint8Array(n);
+  for(i=0;i<n;i++)clear[i]=near[i]?0:1;
+  near=null;
+  var IC=integral(null,W,H,clear),IS=integral(lum,W,H,clear);
+  var core=new Uint8Array(cnt+1).fill(255),size=new Int32Array(cnt+1),sSum=new Float32Array(cnt+1);
+  var bx0=new Int32Array(cnt+1).fill(1e9),by0=new Int32Array(cnt+1).fill(1e9),bx1=new Int32Array(cnt+1),by1=new Int32Array(cnt+1);
+  for(y=0;y<H;y++)for(x=0;x<W;x++){
+    i=y*W+x;var c=lab[i];if(!c)continue;c=map[c];lab[i]=c;size[c]++;if(blur[i]<core[c])core[c]=blur[i];
+    if(x<bx0[c])bx0[c]=x;if(x>bx1[c])bx1[c]=x;if(y<by0[c])by0[c]=y;if(y>by1[c])by1[c]=y;
+    var cc=boxSum(IC,W,H,x,y,4);sSum[c]+=cc?boxSum(IS,W,H,x,y,4)/cc:255;
+  }
+  var surr=new Uint8Array(cnt+1);for(k=1;k<=cnt;k++)surr[k]=size[k]?sSum[k]/size[k]:255;
+  var hist=new Int32Array(256),tot=0,dark=120;
+  for(k=1;k<=cnt;k++)if(size[k]>=12&&size[k]<=1500){hist[core[k]]++;tot++}
+  if(tot>=10){var acc=0;for(k=0;k<256;k++){acc+=hist[k];if(acc>=tot*0.25){dark=k;break}}}
+  return {W:W,H:H,lum:lum,lmin:lmin,lab:lab,core:core,surr:surr,clear:clear,IC:IC,IS:IS,dark:dark,
+    size:size,bx0:bx0,by0:by0,bx1:bx1,by1:by1,s1:new Uint8Array(n),s2:new Uint8Array(n),s3:new Uint8Array(n)};
+}
+
+/* Replace removed pixels, and the faint fringe around them, with the colour of what
+   surrounds them (paper, or the coloured figure a line was drawn across). Pixels next to
+   marks that stay are left alone. rm is a 0/1 mask over [x0,x0+ww)x[y0,y0+wh). */
+function applyRemoval(d,A,rm,x0,y0,ww,wh){
+  var W=A.W,H=A.H,x,y,i,li,full=A.s1;
+  for(y=0;y<wh;y++)for(x=0;x<ww;x++){if(rm[y*ww+x])full[(y+y0)*W+x+x0]=1}
+  var grow=dilate(full,W,H,2,x0,y0,x0+ww,y0+wh);
+  var kept=A.s2,ex0=Math.max(0,x0-1),ey0=Math.max(0,y0-1),ex1=Math.min(W,x0+ww+1),ey1=Math.min(H,y0+wh+1);
+  for(y=ey0;y<ey1;y++)for(x=ex0;x<ex1;x++){i=y*W+x;if(A.lab[i]&&!full[i])kept[i]=1}
+  var keptNear=dilate(kept,W,H,1,x0,y0,x0+ww,y0+wh);
+  var paperBg=ed.s.scanOn?null:ed.bg,todo=[],cols=[];
+  for(y=0;y<wh;y++)for(x=0;x<ww;x++){
+    li=y*ww+x;i=(y+y0)*W+x+x0;var gx=x+x0,gy=y+y0,go=rm[li];
+    if(!go&&grow[li]&&!keptNear[li]){var cc=boxSum(A.IC,W,H,gx,gy,4);var sl=cc?boxSum(A.IS,W,H,gx,gy,4)/cc:255;if(A.lum[i]<sl-4)go=1}
+    if(!go)continue;
+    /* average colour of clear (non-ink) pixels nearby, looking further out if needed */
+    var r=0,g=0,b=0,c=0,rad,dx,dy;
+    for(rad=4;rad<=12&&!c;rad+=4){
+      for(dy=-rad;dy<=rad;dy++){var yy=gy+dy;if(yy<0||yy>=H)continue;for(dx=-rad;dx<=rad;dx++){var xx=gx+dx;if(xx<0||xx>=W)continue;var j=yy*W+xx;if(!A.clear[j]||full[j])continue;var q=j*4;r+=d[q];g+=d[q+1];b+=d[q+2];c++}}
+    }
+    var p=i*4;
+    if(c){cols.push(r/c,g/c,b/c)}else if(paperBg){cols.push(paperBg[p],paperBg[p+1],paperBg[p+2])}else{cols.push(255,255,255)}
+    todo.push(p);
+  }
+  for(var t=0;t<todo.length;t++){var pp=todo[t];d[pp]=cols[t*3];d[pp+1]=cols[t*3+1];d[pp+2]=cols[t*3+2]}
+  for(y=y0;y<y0+wh;y++)full.fill(0,y*W+x0,y*W+x0+ww);
+  for(y=ey0;y<ey1;y++)kept.fill(0,y*W+ex0,y*W+ex1);
+}
+/* Automatic: remove marks clearly lighter than print that sit on plain paper, away from
+   printed text (so the dot of an i or a thin letter next to darker letters is never touched).
+   f near 1 = only the faintest. */
+function autoRemove(d,A,f){
+  var W=A.W,H=A.H,n=W*H,T=A.dark+f*(255-A.dark),cnt=A.core.length-1,i,c;
+  var darkInk=new Uint8Array(n);
+  for(i=0;i<n;i++){c=A.lab[i];if(c&&A.core[c]<=T-25)darkInk[i]=1}
+  var nearDark=dilate(darkInk,W,H,6,0,0,W,H),guard=new Uint8Array(cnt+1);
+  for(i=0;i<n;i++){c=A.lab[i];if(c&&nearDark[i])guard[c]=1}
+  darkInk=nearDark=null;
+  var rm=new Uint8Array(n),any=false;
+  for(i=0;i<n;i++){c=A.lab[i];if(c&&!guard[c]&&A.core[c]>T&&A.surr[c]>240){rm[i]=1;any=true}}
+  if(any)applyRemoval(d,A,rm,0,0,W,H);
+}
+/* Nearest mark pixel to (tx,ty) within rad, or -1. */
+function findMark(A,tx,ty,rad){
+  var W=A.W,H=A.H,best=-1,bd=1e9,x,y;
+  for(y=Math.max(0,ty-rad);y<=Math.min(H-1,ty+rad);y++)for(x=Math.max(0,tx-rad);x<=Math.min(W-1,tx+rad);x++){
+    var i=y*W+x;if(!A.lab[i])continue;
+    var dd=(x-tx)*(x-tx)+(y-ty)*(y-ty);if(dd<bd){bd=dd;best=i}
+  }
+  return bd<=rad*rad?best:-1;
+}
+/* Remove mark c inside the window, but keep its parts darker than g (printed text or
+   outlines the mark touches) and their edges. */
+function strokeRemove(d,A,c,g,x0,y0,x1,y1){
+  var W=A.W,ww=x1-x0,wh=y1-y0,dark=A.s3,rm=new Uint8Array(ww*wh),any=false,x,y,i;
+  for(y=y0;y<y1;y++)for(x=x0;x<x1;x++){i=y*W+x;if(A.lab[i]===c&&A.lmin[i]<g)dark[i]=1}
+  var guard=dilate(dark,W,A.H,2,x0,y0,x1,y1);
+  for(y=y0;y<y1;y++){dark.fill(0,y*W+x0,y*W+x1);for(x=x0;x<x1;x++){i=y*W+x;var li=(y-y0)*ww+x-x0;if(A.lab[i]===c&&!guard[li]){rm[li]=1;any=true}}}
+  if(any)applyRemoval(d,A,rm,x0,y0,ww,wh);
+  return any;
+}
+/* Typical darkness of mark c near pixel b (median of the darkest-nearby values). */
+function localCore(A,b,c){
+  var W=A.W,H=A.H,bx=b%W,by=(b/W)|0,vals=[],x,y,i;
+  for(y=Math.max(0,by-4);y<=Math.min(H-1,by+4);y++)for(x=Math.max(0,bx-4);x<=Math.min(W-1,bx+4);x++){i=y*W+x;if(A.lab[i]===c)vals.push(A.lmin[i])}
+  vals.sort(function(a,b2){return a-b2});return vals.length?vals[vals.length>>1]:255;
+}
+function windowCore(A,c,x0,y0,x1,y1){
+  var h=new Int32Array(256),n=0,x,y,i;
+  for(y=y0;y<y1;y++)for(x=x0;x<x1;x++){i=y*A.W+x;if(A.lab[i]===c){h[A.lmin[i]]++;n++}}
+  for(var k=0,acc=0;k<256;k++){acc+=h[k];if(acc*2>=n)return k}return 255;
+}
+/* Tap: remove the touched mark near the tap. */
+function tapRemove(d,A,tx,ty,rad){
+  var best=findMark(A,tx,ty,rad);if(best<0)return false;
+  var W=A.W,H=A.H,bx=best%W,by=(best/W)|0,cid=A.lab[best];
+  var R=Math.round(Math.max(40,0.07*Math.max(W,H)));
+  return strokeRemove(d,A,cid,localCore(A,best,cid)-30,Math.max(0,bx-R),Math.max(0,by-R),Math.min(W,bx+R+1),Math.min(H,by+R+1));
+}
+/* A mark found by the AI: box and points on the stroke, in image pixels.
+   The stroke's darkness is the median over all its points, so a point that lands on a
+   printed letter by mistake does not decide anything. Marks under the points go, but any
+   part clearly darker than the stroke (printed text it touches) stays. Inside the box,
+   other marks go only if they are lighter than print and either cover most of the box
+   or the box is a handwritten note. */
+function aiRemove(d,A,m){
+  var W=A.W,H=A.H,L=Math.max(W,H),pad=Math.max(3,Math.round(0.006*L)),pr=Math.max(6,Math.round(0.012*L)),x,y,c,any=false,done={};
+  var ex0=Math.max(0,Math.floor(m.x0)-pad),ey0=Math.max(0,Math.floor(m.y0)-pad),ex1=Math.min(W,Math.ceil(m.x1)+pad+1),ey1=Math.min(H,Math.ceil(m.y1)+pad+1);
+  var bw=Math.max(1,m.x1-m.x0),bh=Math.max(1,m.y1-m.y0),hw=m.label==="handwriting"||m.label==="scribble";
+  function spans(c){return (A.bx1[c]-A.bx0[c]+1)>=0.6*bw&&(A.by1[c]-A.by0[c]+1)>=0.6*bh}
+  /* a broken piece of a drawn circle: sits near the edge of the box, not in the middle where the circled text is */
+  function onRing(c){var cx=(A.bx0[c]+A.bx1[c])/2,cy=(A.by0[c]+A.by1[c])/2,dx=(cx-(m.x0+m.x1)/2)/(bw/2),dy=(cy-(m.y0+m.y1)/2)/(bh/2);return dx*dx+dy*dy>0.45}
+  var hits=[],cores=[];
+  (m.pts||[]).forEach(function(p){var b=findMark(A,Math.round(p[0]),Math.round(p[1]),pr);if(b>=0){hits.push(b);cores.push(localCore(A,b,A.lab[b]))}});
+  cores.sort(function(a,b){return a-b});
+  var tc=cores.length?cores[cores.length>>1]:0;
+  /* keep what is clearly darker than the lighter-than-usual parts of this stroke, and always what is as dark as print */
+  var g=cores.length?Math.max(cores[cores.length>>2]-25,A.dark+5):0;
+  hits.forEach(function(b){
+    c=A.lab[b];if(done[c])return;done[c]=1;
+    /* as dark as print: only when this mark is the whole box (a dark pen circle, say) */
+    if(tc<=A.dark+5&&!spans(c))return;
+    if(strokeRemove(d,A,c,g,ex0,ey0,ex1,ey1))any=true;
+  });
+  var inBox={};
+  for(y=ey0;y<ey1;y++)for(x=ex0;x<ex1;x++){c=A.lab[y*W+x];if(c&&!done[c])inBox[c]=(inBox[c]||0)+1}
+  Object.keys(inBox).forEach(function(k){
+    c=+k;if(inBox[c]<0.9*A.size[c])return;
+    if(A.core[c]<=A.dark+(hw?8:15))return;
+    if(!hw&&!spans(c)&&!(m.label==="circle"&&tc&&Math.abs(A.core[c]-tc)<=30&&onRing(c)))return;
+    if(strokeRemove(d,A,c,Math.max(windowCore(A,c,ex0,ey0,ex1,ey1)-30,A.dark+5),ex0,ey0,ex1,ey1))any=true;
+  });
+  return any;
+}
+
+/* Full pipeline: paper normalisation, coloured-pen removal, mark analysis. */
+function process(){
+  var s=ed.s,W=ed.W,H=ed.H,px=edProc.getContext("2d",{willReadFrequently:true});
+  px.drawImage(edOrig,0,0);
+  var id=px.getImageData(0,0,W,H),d=id.data,bg=background(),nd=new Uint8ClampedArray(d.length),i;
+  var satT=150-s.colorStr*1.15,lo=satT*0.55;
+  for(i=0;i<d.length;i+=4){
+    var r=d[i],g=d[i+1],b=d[i+2];
+    var nr=Math.min(255,r*255/Math.max(bg[i],40)),ng=Math.min(255,g*255/Math.max(bg[i+1],40)),nb=Math.min(255,b*255/Math.max(bg[i+2],40));
+    if(s.colorOn){
+      var mx=Math.max(nr,ng,nb),mn=Math.min(nr,ng,nb),sat=mx-mn,t=sat>=satT?1:sat>lo?(sat-lo)/(satT-lo):0;
+      if(t){nr+=(255-nr)*t;ng+=(255-ng)*t;nb+=(255-nb)*t;r+=(bg[i]-r)*t;g+=(bg[i+1]-g)*t;b+=(bg[i+2]-b)*t}
+    }
+    nd[i]=nr;nd[i+1]=ng;nd[i+2]=nb;nd[i+3]=255;
+    if(s.scanOn){d[i]=nr;d[i+1]=ng;d[i+2]=nb}else{d[i]=r;d[i+1]=g;d[i+2]=b}
+  }
+  ed.A=analyse(nd,W,H);
+  ed.pre=d;
+  applyAuto();
+}
+function applyAuto(){
+  var d=new Uint8ClampedArray(ed.pre);
+  if(ed.s.pencilOn)autoRemove(d,ed.A,0.7-0.4*ed.s.faint/100);
+  ed.base=d;compose();
+}
+/* Base image + tap removals + final contrast, into edProc. Brush strokes are drawn on top later. */
+function compose(){
+  var W=ed.W,H=ed.H,d=new Uint8ClampedArray(ed.base),i;
+  ed.s.strokes.forEach(function(st){
+    if(st.t==="tap")tapRemove(d,ed.A,st.x,st.y,st.r||12);
+    else if(st.t==="ai")st.marks.forEach(function(m){aiRemove(d,ed.A,m)});
+  });
+  if(ed.s.scanOn){var B=45,k2=255/(255-B);for(i=0;i<d.length;i+=4){d[i]=(d[i]-B)*k2;d[i+1]=(d[i+1]-B)*k2;d[i+2]=(d[i+2]-B)*k2}}
+  edProc.getContext("2d").putImageData(new ImageData(d,W,H),0,0);
+}
+function drawStrokes(x,ox,oy){
+  x.save();x.strokeStyle="#fff";x.fillStyle="#fff";x.lineCap="round";x.lineJoin="round";
+  if(!ed.s.scanOn){x.strokeStyle=x.fillStyle="rgb(240,240,236)"}
+  ed.s.strokes.forEach(function(st){
+    if(st.t)return;
+    x.lineWidth=st.w;x.beginPath();
+    if(st.p.length===1){x.arc(st.p[0][0]-ox,st.p[0][1]-oy,st.w/2,0,Math.PI*2);x.fill();return}
+    st.p.forEach(function(p,i){if(i===0)x.moveTo(p[0]-ox,p[1]-oy);else x.lineTo(p[0]-ox,p[1]-oy)});
+    x.stroke();
+  });
+  x.restore();
+}
+function draw(){
+  if(!ed||!ed.W)return;
+  var s=ed.s,full=ed.mode==="crop",c=(full||!s.crop)?{x:0,y:0,w:ed.W,h:ed.H}:s.crop;
+  if(cv.width!==c.w||cv.height!==c.h){cv.width=c.w;cv.height=c.h;edZoom.reset()}
+  var x=cv.getContext("2d");
+  x.drawImage(ed.showOrig?edOrig:edProc,c.x,c.y,c.w,c.h,0,0,c.w,c.h);
+  if(!ed.showOrig)drawStrokes(x,c.x,c.y);
+  if(ed.aiPending&&!ed.showOrig){
+    var lw=Math.max(2,Math.round(Math.max(c.w,c.h)/280));
+    x.save();x.lineWidth=lw;x.setLineDash([lw*4,lw*2.5]);
+    ed.aiPending.forEach(function(m){
+      var rx=m.x0-c.x-lw*2,ry=m.y0-c.y-lw*2,rw=m.x1-m.x0+lw*4,rh=m.y1-m.y0+lw*4;
+      if(m.off){x.fillStyle="rgba(255,255,255,.55)";x.fillRect(rx,ry,rw,rh);x.strokeStyle="rgba(110,120,140,.9)"}
+      else{x.fillStyle="rgba(211,38,58,.08)";x.fillRect(rx,ry,rw,rh);x.strokeStyle="#D3263A"}
+      x.strokeRect(rx,ry,rw,rh);
+    });
+    x.restore();
+  }
+  if(full){var r=ed.draft||s.crop;if(r){
+    x.save();x.fillStyle="rgba(10,16,30,.5)";x.beginPath();x.rect(0,0,c.w,c.h);x.rect(r.x,r.y,r.w,r.h);x.fill("evenodd");
+    x.strokeStyle="#D3263A";x.lineWidth=Math.max(2,c.w/250);x.setLineDash([x.lineWidth*5,x.lineWidth*3]);x.strokeRect(r.x,r.y,r.w,r.h);x.restore();
+  }}
+  fit();
+}
+function fit(){
+  var st=$("#ed-stage"),aw=st.clientWidth-24,ah=st.clientHeight-24;if(aw<=0||ah<=0)return;
+  var k=Math.min(aw/cv.width,ah/cv.height);
+  cv.style.width=Math.floor(cv.width*k)+"px";cv.style.height=Math.floor(cv.height*k)+"px";
+}
+window.addEventListener("resize",function(){if(ed){fit();edZoom.reset()}});
+
+/* ---------- pinch zoom ---------- */
+function makeZoomer(stage,target,o){
+  var z=1,tx=0,ty=0,pts=new Map(),pinch=null,pan=null,gesture=false,MAX=o.max||6;
+  function apply(){target.style.transform=(z===1&&!tx&&!ty)?"":"translate("+tx+"px,"+ty+"px) scale("+z+")";if(o.onChange)o.onChange(z)}
+  function center(){var r=stage.getBoundingClientRect();return [r.left+r.width/2,r.top+r.height/2]}
+  function clampT(){
+    if(z<=1.001){z=1;tx=0;ty=0;return}
+    var lx=Math.max(0,(target.offsetWidth*z-stage.clientWidth)/2)+48,ly=Math.max(0,(target.offsetHeight*z-stage.clientHeight)/2)+48;
+    tx=clamp(tx,-lx,lx);ty=clamp(ty,-ly,ly);
+  }
+  function zoomAt(nz,cx,cy){
+    nz=clamp(nz,1,MAX);var c=center(),px=(cx-c[0]-tx)/z,py=(cy-c[1]-ty)/z;
+    z=nz;tx=cx-c[0]-z*px;ty=cy-c[1]-z*py;clampT();apply();
+  }
+  function two(){var a=Array.from(pts.values());return {d:Math.hypot(a[0][0]-a[1][0],a[0][1]-a[1][1])||1,m:[(a[0][0]+a[1][0])/2,(a[0][1]+a[1][1])/2]}}
+  stage.addEventListener("pointerdown",function(e){
+    if(e.target.closest&&e.target.closest("button"))return;
+    pts.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pts.size===2){
+      gesture=true;pan=null;if(o.onCancel)o.onCancel();
+      var t=two();pinch={d:t.d,m:t.m,z:z,tx:tx,ty:ty};
+    }else if(pts.size===1){
+      gesture=false;
+      if(!o.panOne||o.panOne(e))pan={x:e.clientX,y:e.clientY,tx:tx,ty:ty,moved:false};
+    }
+  });
+  /* Moves and lifts are watched on the whole window, so a finger that drifts off the photo still counts. */
+  window.addEventListener("pointermove",function(e){
+    if(!pts.has(e.pointerId))return;
+    pts.set(e.pointerId,[e.clientX,e.clientY]);
+    if(pinch&&pts.size>=2){
+      var t=two(),c=center(),px=(pinch.m[0]-c[0]-pinch.tx)/pinch.z,py=(pinch.m[1]-c[1]-pinch.ty)/pinch.z;
+      z=clamp(pinch.z*t.d/pinch.d,1,MAX);tx=t.m[0]-c[0]-z*px;ty=t.m[1]-c[1]-z*py;clampT();apply();
+    }else if(pan){
+      var dx=e.clientX-pan.x,dy=e.clientY-pan.y;
+      if(!pan.moved&&Math.abs(dx)+Math.abs(dy)>8){pan.moved=true;gesture=true}
+      if(pan.moved&&z>1){tx=pan.tx+dx;ty=pan.ty+dy;clampT();apply()}
+    }
+  });
+  function up(e){
+    if(!pts.has(e.pointerId))return;
+    pts.delete(e.pointerId);
+    if(pts.size<2)pinch=null;
+    if(pts.size===0){pan=null;gesture=false}
+  }
+  window.addEventListener("pointerup",up);window.addEventListener("pointercancel",up);
+  stage.addEventListener("wheel",function(e){e.preventDefault();zoomAt(z*Math.exp(-e.deltaY*0.0015),e.clientX,e.clientY)},{passive:false});
+  return {
+    reset:function(){z=1;tx=0;ty=0;pinch=null;pan=null;apply()},
+    zoomBy:function(f){var c=center();zoomAt(z*f,c[0],c[1])},
+    zoomAt:zoomAt,
+    toggle:function(cx,cy){if(z>1.05)this.reset();else zoomAt(2.5,cx,cy)},
+    busy:function(){return gesture||pts.size>1},
+    count:function(){return pts.size},
+    level:function(){return z}
+  };
+}
+var edZoom=makeZoomer($("#ed-stage"),cv,{
+  max:8,
+  panOne:function(){return !ed||ed.mode==="clean"||(ed.mode==="erase"&&ed.s.tool==="tap")},
+  onCancel:function(){
+    if(!ed)return;
+    if(ed.drawing){var i=ed.s.strokes.indexOf(ed.drawing);if(i>=0)ed.s.strokes.splice(i,1);ed.drawing=null;draw()}
+    if(ed.cropStart){ed.cropStart=null;ed.draft=null;draw()}
+    ed.tapStart=null;
+  },
+  onChange:function(z){$("#ed-zfit").disabled=z<=1}
+});
+$("#ed-zin").addEventListener("click",function(){edZoom.zoomBy(1.6)});
+$("#ed-zout").addEventListener("click",function(){edZoom.zoomBy(1/1.6)});
+$("#ed-zfit").addEventListener("click",function(){edZoom.reset()});
+
+function toImg(e){
+  var r=cv.getBoundingClientRect(),c=(ed.mode!=="crop"&&ed.s.crop)?ed.s.crop:{x:0,y:0};
+  return [Math.round((e.clientX-r.left)/r.width*cv.width+c.x),Math.round((e.clientY-r.top)/r.height*cv.height+c.y)];
+}
+cv.addEventListener("pointerdown",function(e){
+  if(!ed||!ed.W)return;
+  if(ed.mode==="clean"){if(ed.aiPending&&edZoom.count()===0)ed.tapStart=[e.clientX,e.clientY];return}
+  if(edZoom.count()>0)return; /* second finger: pinch zoom */
+  e.preventDefault();
+  if(ed.mode==="erase"&&ed.s.tool==="tap"){ed.tapStart=[e.clientX,e.clientY];return}
+  try{cv.setPointerCapture(e.pointerId)}catch(_){}
+  var p=toImg(e);
+  if(ed.mode==="erase"){var r=cv.getBoundingClientRect();ed.drawing={w:Math.max(2,Math.round(ed.s.brush*cv.width/r.width)),p:[p]};ed.s.strokes.push(ed.drawing);draw()}
+  else{ed.cropStart=p;ed.draft=null;draw()}
+});
+cv.addEventListener("pointermove",function(e){
+  if(!ed||edZoom.count()>1)return;
+  if(ed.mode==="erase"&&ed.drawing){ed.drawing.p.push(toImg(e));draw()}
+  else if(ed.mode==="crop"&&ed.cropStart){
+    var p=toImg(e),a=ed.cropStart;
+    var x0=clamp(Math.min(a[0],p[0]),0,ed.W),y0=clamp(Math.min(a[1],p[1]),0,ed.H),x1=clamp(Math.max(a[0],p[0]),0,ed.W),y1=clamp(Math.max(a[1],p[1]),0,ed.H);
+    ed.draft={x:x0,y:y0,w:x1-x0,h:y1-y0};draw();
+  }
+});
+function doTap(e){
+  var r=cv.getBoundingClientRect(),p=toImg(e),rad=Math.min(60,Math.max(6,Math.round(16*cv.width/r.width)));
+  if(p[0]<0||p[1]<0||p[0]>=ed.W||p[1]>=ed.H)return;
+  if(findMark(ed.A,p[0],p[1],rad)<0){toast("Burada silinecek iz bulunamadı. İzin tam üzerine dokun ya da yakınlaştır.");return}
+  ed.s.strokes.push({t:"tap",x:p[0],y:p[1],r:rad});compose();draw();
+}
+cv.addEventListener("pointerup",function(e){
+  if(!ed)return;
+  if(ed.tapStart&&ed.mode==="clean"&&ed.aiPending&&!edZoom.busy()){
+    if(Math.abs(e.clientX-ed.tapStart[0])+Math.abs(e.clientY-ed.tapStart[1])<10)toggleAiMark(e);
+  }
+  if(ed.tapStart&&ed.mode==="erase"&&ed.s.tool==="tap"&&!edZoom.busy()){
+    var moved=Math.abs(e.clientX-ed.tapStart[0])+Math.abs(e.clientY-ed.tapStart[1]);
+    if(moved<10)doTap(e);
+  }
+  ed.tapStart=null;ed.drawing=null;ed.cropStart=null;
+});
+cv.addEventListener("pointercancel",function(){if(ed){ed.tapStart=null;ed.drawing=null;ed.cropStart=null}});
+
+function syncControls(){
+  var s=ed.s;$("#ed-color").checked=s.colorOn;$("#ed-colorStr").value=s.colorStr;$("#ed-colorStr").disabled=!s.colorOn;
+  $("#ed-scan").checked=s.scanOn;$("#ed-pencil").checked=s.pencilOn;$("#ed-pencilStr").value=s.faint;$("#ed-pencilStr").disabled=!s.pencilOn;
+  $("#ed-brush").value=s.brush;
+  document.querySelectorAll("#ed-tools button").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.tool===s.tool))});
+  $("#ed-brushrow").hidden=s.tool!=="brush";
+  $("#ed-hint-tap").hidden=s.tool!=="tap";$("#ed-hint-brush").hidden=s.tool!=="brush";
+}
+var pend=false,pendAuto=false;
+/* Slow steps: show "Hazırlanıyor…" first so the screen does not look frozen. */
+function heavy(fn){
+  if(pend)return;pend=true;$("#ed-busy-text").textContent="Hazırlanıyor…";$("#ed-busy-stop").hidden=true;$("#ed-busy").hidden=false;
+  setTimeout(function(){pend=false;if(ed&&ed.img){fn();draw()}$("#ed-busy").hidden=true},40);
+}
+function reprocess(){heavy(process)}
+function reauto(){if(pendAuto)return;pendAuto=true;requestAnimationFrame(function(){pendAuto=false;if(!ed||!ed.W)return;applyAuto();draw()})}
+function setMode(m){
+  ed.mode=m;ed.draft=null;
+  document.querySelectorAll(".seg button[data-m]").forEach(function(b){b.setAttribute("aria-pressed",String(b.dataset.m===m))});
+  $("#p-clean").hidden=m!=="clean";$("#p-erase").hidden=m!=="erase";$("#p-crop").hidden=m!=="crop";
+  cv.style.cursor=m==="clean"?"grab":(m==="erase"&&ed.s.tool==="tap")?"pointer":"crosshair";draw();
+}
+document.querySelectorAll(".seg button[data-m]").forEach(function(b){b.addEventListener("click",function(){if(ed)setMode(b.dataset.m)})});
+document.querySelectorAll("#ed-tools button").forEach(function(b){b.addEventListener("click",function(){if(!ed)return;ed.s.tool=b.dataset.tool;syncControls();setMode("erase")})});
+$("#ed-color").addEventListener("change",function(){ed.s.colorOn=this.checked;syncControls();reprocess()});
+$("#ed-colorStr").addEventListener("input",function(){ed.s.colorStr=+this.value;reprocess()});
+$("#ed-scan").addEventListener("change",function(){ed.s.scanOn=this.checked;reprocess()});
+$("#ed-pencil").addEventListener("change",function(){ed.s.pencilOn=this.checked;syncControls();reauto()});
+$("#ed-pencilStr").addEventListener("input",function(){ed.s.faint=+this.value;reauto()});
+function rotate(dir){
+  if(!ed||!ed.img)return;
+  var had=ed.s.strokes.length||ed.s.crop;
+  ed.s.rot=((ed.s.rot||0)+dir+4)%4;ed.s.strokes=[];ed.s.crop=null;ed.draft=null;
+  heavy(function(){buildOrig();process()});
+  if(had)toast("Döndürünce silgi ve kırpma sıfırlandı.");
+}
+$("#ed-rotl").addEventListener("click",function(){rotate(-1)});
+$("#ed-rotr").addEventListener("click",function(){rotate(1)});
+$("#ed-brush").addEventListener("input",function(){ed.s.brush=+this.value});
+$("#ed-undo").addEventListener("click",function(){var st=ed.s.strokes.pop();if(st&&st.t==="tap")compose();draw()});
+$("#ed-clear").addEventListener("click",function(){ed.s.strokes=[];compose();draw()});
+$("#ed-docrop").addEventListener("click",function(){
+  var r=ed.draft;if(!r||r.w<30||r.h<30){toast("Önce sorunun çevresine bir kutu çiz.");return}
+  ed.s.crop={x:r.x,y:r.y,w:r.w,h:r.h};setMode("clean");toast("Kırpıldı.");
+});
+$("#ed-uncrop").addEventListener("click",function(){ed.s.crop=null;ed.draft=null;draw()});
+var ob=$("#ed-orig");
+function origOn(e){if(!ed)return;e.preventDefault();ed.showOrig=true;draw()}
+function origOff(){if(ed&&ed.showOrig){ed.showOrig=false;draw()}}
+ob.addEventListener("pointerdown",origOn);["pointerup","pointerleave","pointercancel"].forEach(function(t){ob.addEventListener(t,origOff)});
+ob.addEventListener("contextmenu",function(e){e.preventDefault()});
+function closeEditor(){ed=null;$("#editor").hidden=true;edZoom.reset()}
+function cancelEditor(){
+  var k=ed&&ed.k;
+  if(k&&!form[k+"File"]&&form[k+"Raw"]&&typeof form[k+"Raw"]!=="string"){form[k+"File"]=form[k+"Raw"];form[k+"Prev"]=URL.createObjectURL(form[k+"Raw"]);if(k==="q")form.oFile=null}
+  closeEditor();renderForm();
+}
+$("#ed-cancel").addEventListener("click",cancelEditor);
+$("#ed-use").addEventListener("click",function(){
+  if(!ed||!ed.W)return;
+  var s=ed.s,c=s.crop||{x:0,y:0,w:ed.W,h:ed.H},k=ed.k,raw=ed.raw,isOrig=ed.isOrig;
+  var o=document.createElement("canvas");o.width=c.w;o.height=c.h;var x=o.getContext("2d");
+  x.drawImage(edProc,c.x,c.y,c.w,c.h,0,0,c.w,c.h);drawStrokes(x,c.x,c.y);
+  var oc=null;
+  if(k==="q"&&isOrig){oc=document.createElement("canvas");oc.width=c.w;oc.height=c.h;oc.getContext("2d").drawImage(edOrig,c.x,c.y,c.w,c.h,0,0,c.w,c.h)}
+  var saved=JSON.parse(JSON.stringify(s));
+  Promise.all([canvasBlob(o,0.9),oc?canvasBlob(oc,0.85):Promise.resolve(null)]).then(function(r){
+    var b=r[0],ob2=r[1];
+    form[k+"File"]=b;if(form[k+"Prev"])URL.revokeObjectURL(form[k+"Prev"]);form[k+"Prev"]=URL.createObjectURL(b);
+    form[k+"Ed"]=saved;if(!form[k+"Raw"]){form[k+"Raw"]=raw;form[k+"RawOrig"]=isOrig}
+    if(ob2)form.oFile=ob2;
+    var res=ed.aiResult,doRead=k==="q"&&ob2&&!res&&aiKey()&&lsGet("aiRead")!=="0"&&(!form.correct||!form.mine);
+    closeEditor();
+    if(res)applyAnswers(res);
+    renderForm();
+    if(doRead)readAnswers(ob2);
+  },function(){toast("Fotoğraf hazırlanamadı. Tekrar dene.")});
+});
+function canvasBlob(c,q){return new Promise(function(res,rej){c.toBlob(function(b){b?res(b):rej(new Error("blob"))},"image/jpeg",q)})}
+
+/* ---------- photo viewer zoom ---------- */
+var lb=$("#lightbox"),lbImg=lb.querySelector("img");
+var lbZoom=makeZoomer(lb,lbImg,{max:6});
+function openLightbox(src){lbImg.src=src;lb.hidden=false;lbZoom.reset()}
+function closeLightbox(){lb.hidden=true;lbZoom.reset()}
+lb.addEventListener("click",function(e){if(e.target===lb&&!lbZoom.busy()&&lbZoom.level()<=1)closeLightbox()});
+lbImg.addEventListener("dblclick",function(e){lbZoom.toggle(e.clientX,e.clientY)});
+$("#lb-close").addEventListener("click",closeLightbox);
+
+
+
+/* ---------- AI help (Google Gemini, free tier) ---------- */
+var AI_URL="https://generativelanguage.googleapis.com/v1beta/interactions";
+var AI_MODELS=["gemini-3.8-flash","gemini-3.6-flash","gemini-flash-latest","gemini-3.1-flash-lite"];
+function aiKey(){return (lsGet("aiKey")||"").trim()}
+function aiErr(code,msg){return {code:code,message:msg}}
+var AI_MSG={
+  nokey:"Önce Durum bölümünden yapay zekâ anahtarını ekle.",
+  offline:"İnternet bağlantısı yok. Yapay zekâ için internet gerekir.",
+  network:"Google'a bağlanılamadı. İnternet bağlantını kontrol et.",
+  badkey:"Anahtar geçersiz. Durum bölümünden anahtarı kontrol et.",
+  rate:"Ücretsiz kullanım sınırına ulaşıldı. Bir dakika sonra, olmazsa yarın tekrar dene.",
+  server:"Google şu an yoğun. Biraz sonra tekrar dene.",
+  empty:"Yapay zekâ bir sonuç döndürmedi. Tekrar dene.",
+  other:"Yapay zekâ isteği başarısız oldu. Biraz sonra tekrar dene."
+};
+async function aiCall(body,signal){
+  var key=aiKey();if(!key)throw aiErr("nokey",AI_MSG.nokey);
+  if(navigator.onLine===false)throw aiErr("offline",AI_MSG.offline);
+  var last=null;
+  for(var i=0;i<AI_MODELS.length;i++){
+    var res;
+    try{res=await fetch(AI_URL,{method:"POST",headers:{"Content-Type":"application/json","x-goog-api-key":key},body:JSON.stringify(Object.assign({model:AI_MODELS[i],store:false},body)),signal:signal})}
+    catch(e){if(e&&e.name==="AbortError")throw aiErr("cancel","");throw aiErr("network",AI_MSG.network)}
+    if(res.ok){try{return await res.json()}catch(e){throw aiErr("empty",AI_MSG.empty)}}
+    var msg="";try{var j=await res.json();msg=(j&&j.error&&(j.error.message||j.error.status))||""}catch(e){}
+    last={status:res.status,msg:String(msg)};
+    if(/api.?key/i.test(last.msg)&&(res.status===400||res.status===401||res.status===403))break;
+    if(res.status===404||res.status===429||res.status>=500||(res.status===400&&/model/i.test(last.msg)))continue;
+    break;
+  }
+  var st=last?last.status:0,m=last?last.msg:"";
+  if(/api.?key/i.test(m)||st===401)throw aiErr("badkey",AI_MSG.badkey);
+  if(st===429)throw aiErr("rate",AI_MSG.rate);
+  if(st>=500)throw aiErr("server",AI_MSG.server);
+  if(st===403)throw aiErr("badkey",AI_MSG.badkey);
+  throw aiErr("other",AI_MSG.other+(st?" ("+st+")":""));
+}
+/* Text the model wrote in its final answer. */
+function aiText(inter){
+  var steps=(inter&&inter.steps)||[],out=[];
+  for(var i=steps.length-1;i>=0;i--){var st=steps[i];if(st.type==="user_input")break;
+    if(st.type==="model_output"&&st.content){for(var j=st.content.length-1;j>=0;j--){var c=st.content[j];if(c.type==="text"&&c.text)out.unshift(c.text)}if(out.length)break}}
+  var t=out.join("")||(inter&&inter.output_text)||"";
+  if(!t&&inter&&Array.isArray(inter.outputs))t=inter.outputs.map(function(o){return o&&o.type==="text"?o.text:""}).join("");
+  return t;
+}
+function aiJSON(t){
+  try{return JSON.parse(t)}catch(e){}
+  var a=t.indexOf("{"),b=t.lastIndexOf("}");
+  if(a>=0&&b>a){try{return JSON.parse(t.slice(a,b+1))}catch(e){}}
+  return null;
+}
+var AI_PROMPT=[
+"This photo shows one printed multiple-choice question from a Turkish middle-school test book.",
+"Someone wrote on it by hand with a pencil or pen: circles or ellipses around answer choices or numbers, crosses, check marks, an arrow pointing at the correct choice, lines or slashes drawn over figures, underlines, scribbles, and handwritten numbers, notes or calculations.",
+"Task 1. Find every handwritten mark. Never include anything printed: printed text, printed figures and their outlines, printed lines, borders, logos, page numbers or printed fonts that look like handwriting.",
+"For each handwritten mark give: label (one of circle, cross, tick, arrow, line, underline, scribble, handwriting); box_2d as [ymin, xmin, ymax, xmax] normalised to 0-1000, drawn tightly around the ink of that mark; points: 3 to 8 points as [y, x] normalised to 0-1000 that lie exactly on the drawn stroke itself, spread along it.",
+"Task 2. The correct answer is shown by a hand-drawn arrow pointing at one choice. Give that choice's letter (A-E) as correct, or an empty string if there is no such arrow. Give the letters of the choices the student marked by circling, crossing or ticking (not the arrow) as marked.",
+"Task 3. Give subject as one code: mat (matematik), fen (fen bilimleri), tr (Türkçe dil bilgisi), par (paragraf / okuduğunu anlama), din (din kültürü), sos (sosyal bilgiler), ing (İngilizce). Give topic as a short Turkish title of 2 to 5 words."
+].join("\n");
+var AI_SCHEMA={type:"object",properties:{
+  marks:{type:"array",items:{type:"object",properties:{label:{type:"string"},box_2d:{type:"array",items:{type:"integer"}},points:{type:"array",items:{type:"array",items:{type:"integer"}}}},required:["label","box_2d","points"]}},
+  correct:{type:"string"},marked:{type:"array",items:{type:"string"}},subject:{type:"string"},topic:{type:"string"}
+},required:["marks","correct","marked","subject","topic"]};
+/* Send a canvas, get marks (normalised 0-1000) and the answers. */
+async function aiAnalyse(canvas,signal){
+  var b64=canvas.toDataURL("image/jpeg",0.88).split(",")[1];
+  var inter=await aiCall({input:[{type:"text",text:AI_PROMPT},{type:"image",mime_type:"image/jpeg",data:b64}],response_format:{type:"text",mime_type:"application/json",schema:AI_SCHEMA}},signal);
+  var r=aiJSON(aiText(inter));
+  if(!r||typeof r!=="object")throw aiErr("empty",AI_MSG.empty);
+  return r;
+}
+function toLetter(v){v=String(v==null?"":v).trim().toUpperCase().charAt(0);return "ABCDE".indexOf(v)>=0&&v?v:null}
+function cleanAnswers(r){
+  var cor=toLetter(r.correct),mk=[];
+  (Array.isArray(r.marked)?r.marked:[]).forEach(function(v){v=toLetter(v);if(v&&mk.indexOf(v)<0&&v!==cor)mk.push(v)});
+  mk.sort();
+  return {correct:cor,marked:mk,subject:SUBJECTS.some(function(x){return x.k===r.subject})?r.subject:null,topic:typeof r.topic==="string"?r.topic.trim().slice(0,80):""};
+}
+/* Fill only what is still empty in the form. */
+function applyAnswers(r){
+  var a=cleanAnswers(r);
+  if(a.correct&&!form.correct)form.correct=a.correct;
+  if(a.marked.length&&!form.mine)form.mine=a.marked.join(",");
+  if(a.subject&&!form.sub)form.sub=a.subject;
+  if(a.topic&&!form.topic.trim())form.topic=a.topic;
+  form.ai={state:"done",correct:a.correct,marked:a.marked};
+}
+async function readAnswers(blobOrCanvas){
+  var mine=form;form.ai={state:"busy"};softForm();
+  try{
+    var cnv=blobOrCanvas;
+    if(!(cnv instanceof HTMLCanvasElement)){var im=await loadImg(blobOrCanvas);cnv=document.createElement("canvas");cnv.width=im.naturalWidth;cnv.height=im.naturalHeight;cnv.getContext("2d").drawImage(im,0,0)}
+    var r=await aiAnalyse(cnv);
+    if(form!==mine)return;applyAnswers(r);
+  }catch(e){
+    if(form!==mine)return;
+    form.ai={state:"fail",msg:(e&&e.message)||AI_MSG.other,retry:!!(e&&(e.code==="network"||e.code==="server"||e.code==="rate"||e.code==="empty"||e.code==="other"))};
+  }
+  softForm();
+}
+function softForm(){if(view==="ekle"&&!ed)renderForm()}
+function aiNotice(){
+  var a=form.ai;if(!a)return null;
+  var box=el("div","ai-note"+(a.state==="busy"?" busy":""));
+  if(a.state==="busy"){box.appendChild(el("span",null,"Doğru cevap ve işaretlenen şık fotoğraftan okunuyor…"));return box}
+  if(a.state==="fail"){
+    box.appendChild(el("span",null,a.msg+" Cevapları aşağıdan seçebilirsin."));
+    if(a.retry&&form.oFile){var rb=el("button","linkbtn","Tekrar dene");rb.type="button";rb.addEventListener("click",function(){readAnswers(form.oFile)});box.appendChild(rb)}
+    return box;
+  }
+  if(!a.correct&&!a.marked.length){box.appendChild(el("span",null,"Fotoğrafta ok ya da işaret bulunamadı. Cevapları aşağıdan seç."));return box}
+  var parts=[];if(a.correct)parts.push("doğru cevap "+a.correct);if(a.marked.length)parts.push("işaretlenen "+a.marked.join(", "));
+  box.appendChild(el("span",null,"Fotoğraftan okundu: "+parts.join(", ")+". Yanlışsa aşağıdan düzelt."));
+  return box;
+}
+
+/* --- in the photo cleaner --- */
+var aiCtl=null;
+function markedCanvas(){return ed.markedSrc||edOrig}
+async function aiFind(){
+  if(!ed||!ed.W)return;
+  if(!aiKey()){toast(AI_MSG.nokey);return}
+  if(navigator.onLine===false){toast(AI_MSG.offline);return}
+  var c=ed.s.crop||{x:0,y:0,w:ed.W,h:ed.H};
+  var send=document.createElement("canvas");send.width=c.w;send.height=c.h;send.getContext("2d").drawImage(edOrig,c.x,c.y,c.w,c.h,0,0,c.w,c.h);
+  aiCtl=new AbortController();var me=ed;
+  $("#ed-busy-text").textContent="Yapay zekâ izleri arıyor…";$("#ed-busy-stop").hidden=false;$("#ed-busy").hidden=false;
+  try{
+    var r=await aiAnalyse(send,aiCtl.signal);
+    if(ed!==me)return;
+    ed.aiResult=r;
+    var marks=[],L=Math.max(c.w,c.h);
+    (Array.isArray(r.marks)?r.marks:[]).forEach(function(m){
+      var b=m&&m.box_2d;if(!Array.isArray(b)||b.length!==4)return;
+      var y0=clamp(+b[0],0,1000),x0=clamp(+b[1],0,1000),y1=clamp(+b[2],0,1000),x1=clamp(+b[3],0,1000);
+      if(!(x1>x0&&y1>y0))return;
+      var mm={label:String(m.label||"").toLowerCase(),x0:c.x+x0/1000*c.w,y0:c.y+y0/1000*c.h,x1:c.x+x1/1000*c.w,y1:c.y+y1/1000*c.h,pts:[]};
+      (Array.isArray(m.points)?m.points:[]).forEach(function(q){if(Array.isArray(q)&&q.length===2)mm.pts.push([c.x+clamp(+q[1],0,1000)/1000*c.w,c.y+clamp(+q[0],0,1000)/1000*c.h])});
+      /* a box covering most of the photo is almost certainly a mistake: start it switched off */
+      if((x1-x0)*(y1-y0)>0.45*1e6)mm.off=true;
+      if((mm.x1-mm.x0)<L*0.004&&(mm.y1-mm.y0)<L*0.004)return;
+      marks.push(mm);
+    });
+    if(!marks.length){ed.aiPending=null;showAiReview();toast("Yapay zekâ silinecek iz bulamadı.");return}
+    ed.aiPending=marks;setMode("clean");showAiReview();draw();
+  }catch(e){
+    if(e&&e.code==="cancel")return;
+    toast((e&&e.message)||AI_MSG.other);
+  }finally{if(aiCtl&&ed===me)aiCtl=null;$("#ed-busy").hidden=true;$("#ed-busy-stop").hidden=true}
+}
+function showAiReview(){
+  var p=ed&&ed.aiPending,box=$("#ed-ai-review");
+  $("#ed-ai-box").hidden=!!p;box.hidden=!p;
+  if(!p)return;
+  var on=p.filter(function(m){return !m.off}).length;
+  $("#ed-ai-msg").textContent=p.length+" iz bulundu. Kırmızı kutulardaki izler silinecek. Silinmesini istemediğin kutuya dokun"+(on<p.length?" ("+(p.length-on)+" kutu hariç tutuldu).":".");
+  $("#ed-ai-apply").disabled=!on;
+}
+function toggleAiMark(e){
+  var p=toImg(e),best=null,ba=1e18,pad=Math.max(ed.W,ed.H)*0.01;
+  ed.aiPending.forEach(function(m){
+    if(p[0]>=m.x0-pad&&p[0]<=m.x1+pad&&p[1]>=m.y0-pad&&p[1]<=m.y1+pad){var a=(m.x1-m.x0)*(m.y1-m.y0);if(a<ba){ba=a;best=m}}
+  });
+  if(!best)return;best.off=!best.off;showAiReview();draw();
+}
+$("#ed-ai").addEventListener("click",aiFind);
+$("#ed-busy-stop").addEventListener("click",function(){if(aiCtl)aiCtl.abort();$("#ed-busy").hidden=true});
+$("#ed-ai-cancel").addEventListener("click",function(){if(!ed)return;ed.aiPending=null;showAiReview();draw()});
+$("#ed-ai-apply").addEventListener("click",function(){
+  if(!ed||!ed.aiPending)return;
+  var use=ed.aiPending.filter(function(m){return !m.off}).map(function(m){return {label:m.label,x0:m.x0,y0:m.y0,x1:m.x1,y1:m.y1,pts:m.pts}});
+  ed.aiPending=null;showAiReview();
+  if(!use.length){draw();return}
+  ed.s.strokes.push({t:"ai",marks:use});compose();draw();
+  toast(use.length+" iz silindi. Kalan olursa Silgi → Dokunarak sil. Geri almak için Silgi → Geri al.");
+});
+
+/* --- settings card (Durum) --- */
+var aiTesting=false;
+function aiCard(){
+  var c=el("div","card");
+  c.appendChild(el("h3",null,"Yapay zekâ yardımı (ücretsiz)"));
+  c.appendChild(el("p","muted small","İnternet varken fotoğraftaki kalem izlerinin yerini bulur, doğru cevabı ve işaretlenen şıkkı okur. Google'ın ücretsiz Gemini anahtarıyla çalışır; ödeme bilgisi gerekmez."));
+  var key=aiKey();
+  if(key){
+    c.appendChild(el("p","small","Anahtar kayıtlı: "+key.slice(0,4)+"…"+key.slice(-4)));
+    var row=el("label","ctl");var cb=el("input");cb.type="checkbox";cb.id="ai-read";cb.checked=lsGet("aiRead")!=="0";
+    cb.addEventListener("change",function(){lsSet("aiRead",cb.checked?"1":"0")});
+    row.appendChild(el("span",null,"Yeni soruda doğru cevabı fotoğraftan otomatik oku"));row.appendChild(cb);c.appendChild(row);
+    var bs=el("div","btns");
+    var tb=btn("ghost",aiTesting?"Deneniyor…":"Bağlantıyı dene",async function(){
+      if(aiTesting)return;aiTesting=true;renderStats();
+      try{await aiCall({input:"Yalnızca OK yaz."});toast("Bağlantı çalışıyor.")}catch(e){toast((e&&e.message)||AI_MSG.other)}
+      aiTesting=false;renderStats();
+    });
+    bs.appendChild(tb);
+    bs.appendChild(btn("danger","Anahtarı sil",function(){try{localStorage.removeItem("yd_aiKey")}catch(e){}toast("Anahtar silindi.");renderStats()}));
+    c.appendChild(bs);
+  }else{
+    var det=el("details","ai-steps");det.appendChild(el("summary",null,"Anahtar nasıl alınır? (2 dakika)"));
+    var ol=el("ol");
+    ["aistudio.google.com/apikey adresini aç ve Google hesabınla giriş yap.","“Create API key” düğmesine bas. Proje sorarsa varsayılanı seç.","Oluşan anahtarı kopyala (AIza ile başlar).","Aşağıdaki kutuya yapıştır ve Kaydet’e bas. Ödeme (billing) ayarı yapmana gerek yok."].forEach(function(t,i){
+      var li=el("li");
+      if(i===0){var a=el("a",null,"aistudio.google.com/apikey");a.href="https://aistudio.google.com/apikey";a.target="_blank";a.rel="noopener";li.appendChild(a);li.appendChild(document.createTextNode(" adresini aç ve Google hesabınla giriş yap."))}
+      else li.textContent=t;
+      ol.appendChild(li);
+    });
+    det.appendChild(ol);c.appendChild(det);
+    var inp=el("input","field");inp.id="ai-key";inp.type="password";inp.placeholder="AIza…";inp.autocomplete="off";inp.setAttribute("aria-label","Gemini API anahtarı");
+    c.appendChild(inp);
+    c.appendChild(btn("primary block","Kaydet",function(){
+      var v=inp.value.trim();
+      if(v.length<20){toast("Bu bir anahtara benzemiyor. AIza ile başlayan anahtarın tamamını yapıştır.");return}
+      lsSet("aiKey",v);toast("Anahtar kaydedildi.");renderStats();
+    }));
+  }
+  c.appendChild(el("p","muted small","Ücretsiz kullanımda Google gönderilen fotoğrafları ürünlerini geliştirmek için kullanabilir. Yalnızca soru fotoğrafı gönderilir; defterdeki diğer kayıtlar telefonda kalır."));
+  return c;
+}
+
+/* ---------- stats ---------- */
+function renderStats(){
+  var box=$("#v-durum");box.replaceChildren();
+  var wrap=el("div",null);wrap.style.cssText="display:flex;flex-direction:column;gap:16px";box.appendChild(wrap);
+  wrap.appendChild(el("h2",null,"Durum"));
+  if(storeNotice(wrap))return;
+  if(!items.length){emptyIntro(wrap);wrap.appendChild(aiCard());wrap.appendChild(backupCard());return}
+  var total=items.length,mastered=items.filter(function(i){return i.mastered}).length;
+  var figs=el("div","figs");
+  [[total,"Toplam soru"],[total-mastered,"Tekrarda"],[mastered,"Öğrenildi"]].forEach(function(f){var d=el("div","fig");d.appendChild(el("b",null,String(f[0])));d.appendChild(el("span",null,f[1]));figs.appendChild(d)});
+  wrap.appendChild(figs);
+
+  // reasons tip
+  var rc={};items.forEach(function(i){if(i.reason)rc[i.reason]=(rc[i.reason]||0)+1});
+  var topR=Object.keys(rc).sort(function(a,b){return rc[b]-rc[a]})[0];
+  if(topR&&rc[topR]>=2){var tp=el("div","tip");tp.appendChild(el("span","pen-note","İpucu"));tp.appendChild(el("span",null,TIPS[topR]));wrap.appendChild(tp)}
+
+  // per subject
+  var c1=el("div","card");c1.appendChild(el("h3",null,"Derslere göre yanlışlar"));
+  var lg=el("div","legend");var a=el("span");var ai=el("i");ai.style.background="var(--ink-soft)";a.appendChild(ai);a.appendChild(document.createTextNode("Tekrarda"));
+  var b=el("span");var bi=el("i");bi.style.background="color-mix(in srgb,var(--ink-soft) 45%,transparent)";b.appendChild(bi);b.appendChild(document.createTextNode("Öğrenildi"));lg.appendChild(a);lg.appendChild(b);c1.appendChild(lg);
+  var bars=el("div","bars");
+  var per=SUBJECTS.map(function(s){var l=items.filter(function(i){return i.subject===s.k});return {s:s,n:l.length,m:l.filter(function(i){return i.mastered}).length}}).filter(function(x){return x.n}).sort(function(x,y){return y.n-x.n});
+  var max=Math.max.apply(null,per.map(function(x){return x.n}).concat([1]));
+  per.forEach(function(x){
+    var r=el("div","bar");r.style.setProperty("--c","var(--s-"+x.s.k+")");
+    r.appendChild(el("span","lbl",x.s.n));
+    var tr=el("div","track");var f1=el("div","fill");f1.style.width=((x.n-x.m)/max*100)+"%";var f2=el("div","fill ok");f2.style.width=(x.m/max*100)+"%";tr.appendChild(f1);tr.appendChild(f2);
+    r.appendChild(tr);r.appendChild(el("span","n",String(x.n)));bars.appendChild(r);
+  });
+  c1.appendChild(bars);wrap.appendChild(c1);
+
+  // reasons
+  var keys=Object.keys(rc);
+  if(keys.length){
+    var c2=el("div","card");c2.appendChild(el("h3",null,"Yanlış nedenleri"));var b2=el("div","bars");
+    var mx=Math.max.apply(null,keys.map(function(k){return rc[k]}));
+    keys.sort(function(x,y){return rc[y]-rc[x]}).forEach(function(k){
+      var r=el("div","bar");r.style.setProperty("--c","var(--pen)");r.appendChild(el("span","lbl",reasonName(k)));
+      var tr=el("div","track");var f=el("div","fill");f.style.width=(rc[k]/mx*100)+"%";tr.appendChild(f);r.appendChild(tr);r.appendChild(el("span","n",String(rc[k])));b2.appendChild(r);
+    });
+    c2.appendChild(b2);wrap.appendChild(c2);
+  }
+
+  // topics
+  var tc={};items.forEach(function(i){if(!i.topic)return;var k=i.subject+"|"+i.topic.trim().toLocaleLowerCase("tr");if(!tc[k])tc[k]={s:i.subject,t:i.topic.trim(),n:0,open:0};tc[k].n++;if(!i.mastered)tc[k].open++});
+  var tl=Object.keys(tc).map(function(k){return tc[k]}).sort(function(x,y){return y.n-x.n||y.open-x.open}).slice(0,6);
+  if(tl.length){
+    var c3=el("div","card");c3.appendChild(el("h3",null,"En çok yanlış yapılan konular"));
+    var lst=el("div","bars");
+    tl.forEach(function(x){var r=el("div","row between");var l=el("div","row");l.style.minWidth="0";l.appendChild(subjChip(x.s));var tn=el("span",null,x.t);tn.style.fontWeight="700";tn.style.overflowWrap="anywhere";l.appendChild(tn);r.appendChild(l);r.appendChild(el("span","muted small",x.n+" soru"+(x.open?" · "+x.open+" tekrarda":"")));lst.appendChild(r)});
+    c3.appendChild(lst);wrap.appendChild(c3);
+  }
+  wrap.appendChild(aiCard());
+  wrap.appendChild(backupCard());
+}
+
+/* ---------- local storage (IndexedDB) ---------- */
+var photoUrls={},idbHandle=null,importState=null;
+function idbOpen(){
+  return new Promise(function(res,rej){
+    if(!window.indexedDB){rej(new Error("no idb"));return}
+    var r=indexedDB.open("yanlis-defterim",1);
+    r.onupgradeneeded=function(){var d=r.result;if(!d.objectStoreNames.contains("mistakes"))d.createObjectStore("mistakes",{keyPath:"id"});if(!d.objectStoreNames.contains("photos"))d.createObjectStore("photos")};
+    r.onsuccess=function(){res(r.result)};r.onerror=function(){rej(r.error)};r.onblocked=function(){rej(new Error("blocked"))};
+  });
+}
+function idbTx(idb,store,mode,fn){
+  return new Promise(function(res,rej){
+    var t=idb.transaction(store,mode),s=t.objectStore(store),out,rq=fn(s);
+    if(rq)rq.onsuccess=function(){out=rq.result};
+    t.oncomplete=function(){res(out)};t.onerror=t.onabort=function(){rej(t.error||new Error("tx"))};
+  });
+}
+function recBlob(v){return v?new Blob([v.b],{type:v.t||"image/jpeg"}):null}
+function newId(p){return (p||"")+Date.now().toString(36)+Math.random().toString(36).slice(2,9)}
+function makeLocalDB(idb){
+  var listeners=[];
+  async function notify(){
+    var all=await idbTx(idb,"mistakes","readonly",function(s){return s.getAll()})||[];
+    var need=[];
+    all.forEach(function(it){["qPhoto","oPhoto","sPhoto"].forEach(function(k){var p=it[k];if(p&&p.id&&!photoUrls[p.id]&&need.indexOf(p.id)<0)need.push(p.id)})});
+    for(var i=0;i<need.length;i++){var id=need[i];var v=await idbTx(idb,"photos","readonly",function(s){return s.get(id)});if(v)photoUrls[id]=URL.createObjectURL(recBlob(v))}
+    listeners.forEach(function(l){
+      var arr=all.slice().sort(l.cmp);
+      l.next({docs:arr.map(function(o){var c=Object.assign({},o);delete c.id;return {id:o.id,data:function(){return c}}})});
+    });
+  }
+  function docRef(id){
+    return {
+      set:async function(data){var o=JSON.parse(JSON.stringify(data));o.id=id;await idbTx(idb,"mistakes","readwrite",function(s){return s.put(o)});notify()},
+      update:async function(patch){
+        var cur=await idbTx(idb,"mistakes","readonly",function(s){return s.get(id)});
+        if(!cur)throw {code:"not_found"};
+        Object.keys(patch).forEach(function(k){cur[k]=patch[k]});
+        await idbTx(idb,"mistakes","readwrite",function(s){return s.put(cur)});notify();
+      },
+      delete:async function(){await idbTx(idb,"mistakes","readwrite",function(s){return s.delete(id)});notify()}
+    };
+  }
+  return {
+    notify:notify,
+    collection:function(){return {
+      doc:function(id){return docRef(id||newId("m"))},
+      add:async function(data){var id=newId("m");await docRef(id).set(data);return {id:id}},
+      orderBy:function(f,dir){var sign=dir==="desc"?-1:1;return {onSnapshot:function(next,err){
+        var l={next:next,cmp:function(a,b){return ((a[f]||0)-(b[f]||0))*sign}};listeners.push(l);
+        notify().catch(function(e){if(err)err(e)});
+        return function(){var i=listeners.indexOf(l);if(i>=0)listeners.splice(i,1)};
+      }}}
+    }}
+  };
+}
+function makeLocalAssets(idb){
+  return {
+    upload:async function(blob){
+      var id=newId("p"),buf=await blob.arrayBuffer();
+      await idbTx(idb,"photos","readwrite",function(s){return s.put({t:blob.type||"image/jpeg",b:buf},id)});
+      photoUrls[id]=URL.createObjectURL(blob);return {id:id,url:photoUrls[id]};
+    },
+    delete:async function(id){
+      await idbTx(idb,"photos","readwrite",function(s){return s.delete(id)});
+      if(photoUrls[id]){URL.revokeObjectURL(photoUrls[id]);delete photoUrls[id]}
+      return {deleted:true};
+    }
+  };
+}
+
+/* ---------- backup ---------- */
+function relPast(s){var n=-diffDays(s);if(n<=0)return "bugün";if(n===1)return "dün";return n+" gün önce"}
+function dataURLtoRec(u){
+  var i=u.indexOf(","),meta=u.slice(5,i),type=meta.split(";")[0]||"image/jpeg",bin=atob(u.slice(i+1)),arr=new Uint8Array(bin.length);
+  for(var j=0;j<bin.length;j++)arr[j]=bin.charCodeAt(j);
+  return {t:type,b:arr.buffer};
+}
+async function exportBackup(){
+  var all=await idbTx(idbHandle,"mistakes","readonly",function(s){return s.getAll()})||[];
+  var photos={};
+  for(var i=0;i<all.length;i++){
+    var keys=["qPhoto","oPhoto","sPhoto"];
+    for(var k=0;k<keys.length;k++){
+      var p=all[i][keys[k]];if(!p||!p.id||photos[p.id])continue;
+      var pid=p.id,v=await idbTx(idbHandle,"photos","readonly",function(s){return s.get(pid)});
+      if(v)photos[pid]=await toDataURL(recBlob(v));
+    }
+  }
+  var json=JSON.stringify({app:"yanlis-defterim",version:1,exportedAt:new Date().toISOString(),items:all,photos:photos});
+  var name="yanlis-defterim-yedek-"+todayStr()+".json";
+  var file=new File([json],name,{type:"application/json"});
+  try{
+    if(navigator.canShare&&navigator.canShare({files:[file]})){await navigator.share({files:[file],title:"Yanlış Defterim yedeği"});lsSet("lastBackup",todayStr());return "shared"}
+  }catch(e){if(e&&e.name==="AbortError")return "cancel"}
+  var a=document.createElement("a");a.href=URL.createObjectURL(file);a.download=name;document.body.appendChild(a);a.click();
+  setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},5000);
+  lsSet("lastBackup",todayStr());return "downloaded";
+}
+async function readBackup(file){
+  var data=JSON.parse(await file.text());
+  if(!data||data.app!=="yanlis-defterim"||!Array.isArray(data.items))throw new Error("format");
+  return data;
+}
+async function importBackup(data){
+  var photos=data.photos||{},ids=Object.keys(photos);
+  for(var i=0;i<ids.length;i++){
+    var id=ids[i];if(typeof photos[id]!=="string"||photos[id].indexOf("data:")!==0)continue;
+    var rec=dataURLtoRec(photos[id]);
+    await idbTx(idbHandle,"photos","readwrite",function(s){return s.put(rec,id)});
+    if(photoUrls[id]){URL.revokeObjectURL(photoUrls[id]);delete photoUrls[id]}
+  }
+  var n=0;
+  for(var j=0;j<data.items.length;j++){
+    var it=data.items[j];if(!it||typeof it.id!=="string"||!it.subject)continue;
+    await idbTx(idbHandle,"mistakes","readwrite",function(s){return s.put(it)});n++;
+  }
+  await db.notify();
+  return n;
+}
+function backupReminder(){
+  var lb=lsGet("lastBackup");
+  if(items.length<10||(lb&&diffDays(lb)>-14))return null;
+  var p=el("p","notice small",lb?("Son yedek "+relPast(lb)+" alındı. Kayıtlar kaybolmasın diye Durum bölümünden yeni yedek al."):"Henüz yedek almadın. Kayıtlar kaybolmasın diye Durum bölümünden yedek al.");
+  return p;
+}
+function backupCard(){
+  var c=el("div","card");
+  c.appendChild(el("h3",null,"Yedek"));
+  c.appendChild(el("p","muted small","Kayıtlar ve fotoğraflar yalnızca bu telefonda saklanır. Telefon değişirse ya da uygulama silinirse kaybolmasın diye ara sıra yedek al; dosyayı Drive’a, iCloud’a ya da WhatsApp’ta kendine gönder."));
+  var lb=lsGet("lastBackup");
+  c.appendChild(el("p","small",lb?("Son yedek: "+fmtDate(lb)+" ("+relPast(lb)+")"):"Henüz yedek alınmadı."));
+  if(importState){
+    var cf=el("div","confirm");
+    cf.appendChild(el("b",null,"Yedekte "+importState.data.items.length+" soru var. Yüklensin mi?"));
+    cf.appendChild(el("span","small","Defterdeki sorular silinmez. Aynı soru iki yerde de varsa yedekteki hâli kalır."));
+    var cb=el("div","btns");
+    cb.appendChild(btn("ghost","Vazgeç",function(){importState=null;renderStats()}));
+    var go2=btn("primary","Yükle",async function(){
+      go2.disabled=true;go2.textContent="Yükleniyor…";
+      try{var n=await importBackup(importState.data);importState=null;toast(n+" soru yüklendi.")}
+      catch(e){importState=null;toast("Yedek yüklenemedi. Dosya bozuk olabilir.")}
+      renderStats();
+    });
+    cb.appendChild(go2);cf.appendChild(cb);c.appendChild(cf);
+    return c;
+  }
+  var row=el("div","btns");
+  var eb=btn("primary","Yedek al",async function(){
+    if(!items.length){toast("Yedeklenecek soru yok.");return}
+    eb.disabled=true;eb.textContent="Hazırlanıyor…";
+    try{var r=await exportBackup();if(r!=="cancel")toast(r==="shared"?"Yedek paylaşıldı.":"Yedek dosyası indirildi.")}
+    catch(e){toast("Yedek alınamadı. Tekrar dene.")}
+    renderStats();
+  });
+  var inp=el("input");inp.type="file";inp.accept=".json,application/json";inp.id="backup-file";inp.hidden=true;
+  inp.addEventListener("change",async function(){
+    var f=inp.files&&inp.files[0];if(!f)return;
+    try{importState={data:await readBackup(f)};}catch(e){toast("Bu dosya bir Yanlış Defterim yedeği değil.")}
+    renderStats();
+  });
+  var ib=btn("ghost","Yedekten yükle",function(){inp.click()});
+  row.appendChild(eb);row.appendChild(ib);c.appendChild(row);c.appendChild(inp);
+  return c;
+}
+
+/* ---------- boot ---------- */
+var h=(location.hash||"").replace("#","");
+go(VIEWS.indexOf(h)>=0?h:"tekrar");
+
+(async function init(){
+  try{var idb=await idbOpen();idbHandle=idb;db=makeLocalDB(idb);assets=makeLocalAssets(idb)}
+  catch(e){storeState="none";render();return}
+  try{if(navigator.storage&&navigator.storage.persisted)navigator.storage.persisted().then(function(p){if(!p&&navigator.storage.persist)return navigator.storage.persist()}).catch(function(){})}catch(e){}
+  col=db.collection("mistakes");
+  col.orderBy("createdAt","desc").onSnapshot(function(snap){
+    items=snap.docs.map(function(d){var o=Object.assign({},d.data());o.id=d.id;return o});
+    storeState="ready";
+    if(revealed&&!items.some(function(i){return i.id===revealed&&isDue(i)}))revealed=null;
+    render(true);
+  },function(err){storeState="error";render()});
+})();
+})();
+if("serviceWorker" in navigator&&location.protocol!=="file:"){window.addEventListener("load",function(){navigator.serviceWorker.register("sw.js").catch(function(){})})}
+</script>
+</body>
+</html>

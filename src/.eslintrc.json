@@ -1,0 +1,1 @@
+{"root":true,"env":{"browser":true,"es2022":true},"parserOptions":{"ecmaVersion":2022,"sourceType":"script"},"globals":{"jspdf":"readonly","PDF_FONTS":"readonly"},"rules":{"no-undef":"error","no-unused-vars":"off","no-redeclare":"error","no-dupe-keys":"error","no-unreachable":"warn"}}

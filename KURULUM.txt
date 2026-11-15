@@ -1,0 +1,153 @@
+YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 19)
+
+Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulamasıdır.
+İnternet yalnızca kurulumda, güncellemede ve isteğe bağlı yapay zekâ özelliklerinde gerekir.
+
+
+1) ADRES VE GÜNCELLEME
+
+   Uygulamanın adresi: https://beraber06.github.io/yanlis-defterim/
+   Dosyalar GitHub'da durur: github.com/beraber06/yanlis-defterim
+
+   - Güncellemeler GitHub'a yüklenir; yükleme sayısı sınırı yoktur.
+   - Yeni sürüm yayınlanınca telefonda uygulamayı internet açıkken açın,
+     tamamen kapatın ve yeniden açın. Ayarlar > Hakkında'da sürüm numarası yazar.
+   - Adres aynı kaldıkça telefondaki sorular ve fotoğraflar silinmez.
+   - GitHub'da yalnızca programın kodu durur. Sorular, fotoğraflar, sesli notlar
+     ve yapay zekâ anahtarı yalnızca telefonda saklanır.
+
+
+2) İLK KURULUM (yeni bir telefona)
+
+   Android: Adresi Chrome'da açın > sağ üstteki ⋮ > "Uygulamayı yükle".
+   iPhone:  Adresi Safari'de açın > Paylaş > "Ana Ekrana Ekle".
+   Kurduktan sonra ana ekrandaki simgeden internet açıkken bir kez açın.
+   İlk açılışta sınıf seçilir (5, 6, 7 veya 8). Konular buna göre gelir.
+   Eski telefondaki ya da eski adresteki kayıtlar için: eskisinde
+   Ayarlar > "Yedek al", yenisinde Ayarlar > "Yedekten yükle".
+
+
+3) GÜNLÜK KULLANIM
+
+   Soru eklemek:
+   - Alttaki mavi + düğmesi kamerayı açar. Fotoğrafı çekin. Program soruyu
+     otomatik kırpar (beğenmezseniz Kırp → Tüm fotoğraf) ve silik kalem izlerini
+     temizler. Kalan izleri Silgi'deki fırçayla üzerinden geçerek silin.
+   - Ders seçin, Konu listesinden konuyu seçin (MEB müfredatından gelir).
+   - Doğru cevap ve öğrencinin cevabını işaretleyin.
+   - Dikkat notu (isteğe bağlı): "Bir dahakine neye dikkat edeceğim?" yazın ya da
+     "Sesli not kaydet" ile söyleyin. Tekrarda "Dikkat notumu göster" ile açılır.
+   - "Kaydet, yeni soru" kaydeder ve kamerayı hemen tekrar açar.
+
+   Tekrar:
+   - Bugün ekranındaki "Tekrara başla" o günün sorularını sırayla sorar.
+   - Varsayılan düzen: yanlış çözülen soru ertesi gün, ilk doğrudan 7 gün sonra,
+     ikinci doğrudan 14 gün sonra yeniden gelir. "Kaç kez üst üste doğru
+     çözülünce öğrenilsin" (varsayılan 2) kadar arka arkaya doğru çözülen soru
+     öğrenilmiş sayılır ve bir daha sorulmaz. Yanlış çözülürse sayaç sıfırlanır.
+   - Bu günlerin hepsi Ayarlar > "Soru ne zaman yeniden gelsin" bölümünden
+     değiştirilir. Değiştirince bekleyen soruların günü de kendiliğinden kayar.
+   - Kâğıtta çözdüyseniz Bugün ekranındaki "Sonuçları gir" ile sonuçları girin;
+     girilmeyen sorular ilerlemez ve tekrar gelir. Kart, sonuçlar girilene kadar
+     günler geçse de ekranda kalır.
+   - Dünkü kâğıdın sonuçlarını bugün girerseniz ekranda "Kâğıt hangi gün çözüldü?"
+     sorusu çıkar (kâğıdın günü seçili gelir). Sonuçlar o güne yazılır; bugünün
+     soruları azalmaz, takvimde de o gün çalışılmış görünür.
+   - Cevabı gördükten sonra "Benzer soru üret ve çöz": yapay zekâ aynı konudan
+     3 yeni soru yazar. Böylece cevap ezberlenmez, konu öğrenilir.
+     Üretilen sorular saklanır; sonra internetsiz de çözülebilir.
+
+   Bir günün soruları:
+   - Bugün ekranındaki "Bu hafta" kartında bir güne dokunun. O gün çözülen
+     sorular (doğru/yanlış), o gün eklenenler ve o güne planlı tekrarlar açılır.
+     Üstteki oklarla önceki/sonraki güne geçilir.
+   - Her sorunun yanındaki "Çöz" düğmesi yapay zekâ çözümünü açar.
+     "Yapay zekâ sırayla çözsün" listeyi baştan sona gezer; "Yalnız yanlışlar"
+     ile sadece o gün yanlış yapılanlar çözdürülür. Hazır çözümler internetsiz açılır.
+
+   Günlük PDF (kâğıtta çözmek için):
+   - Bugün ekranında "Günlük PDF" > "PDF oluştur" > Paylaş veya İndir > yazdırın.
+   - Çözdükten sonra Bugün ekranındaki "Sonuçları gir" ile Doğru / Yanlış işaretleyin.
+
+
+4) ESKİ SORULARI TOPLU EKLEMEK
+
+   - Bugün ekranında "Toplu ekle" > galeriden 40'a kadar fotoğraf seçin.
+   - Program her fotoğrafı temizler. Yapay zekâ anahtarı varsa ders, konu,
+     doğru cevap ve işaretlenen şıkkı da kendisi doldurur.
+   - Listeyi kontrol edin; yanlış okunan varsa düzeltin. Fotoğrafı düzeltmek için
+     sihirli değnek düğmesine basın. Sonra "… soruyu kaydet".
+   - Hepsi aynı gün sorulmaz. Ayarlar > "Günde kaç soru gelsin" (varsayılan 20):
+     her gün önce tekrar günü gelen sorular girer, kalan yer daha hiç sorulmamış
+     sorularla dolar. Son 3 günde tek tek eklenen taze yanlışlar, "Toplu ekle" ile
+     eklenen eski soruların önüne geçer (yeni soru yerlerinin en fazla yarısını
+     alır, eskiler de ilerlemeye devam eder). Yeni sorular ders ders sırayla
+     seçilir, böylece bir günde tek dersin soruları birikmez.
+     Hiçbiri atlanmaz; sığmayanlar sonraki günlere kalır.
+     Ayarın altında bugün kaç tekrar, kaç yeni soru geleceği yazar.
+
+
+5) YAZILI / SINAV ÖNCESİ TEKRAR
+
+   - Defter > dersi seçin > altındaki listeden konuyu seçin.
+   - "Şimdi çöz": o konunun bütün soruları (öğrenilenler dahil) hemen sorulur.
+   - "PDF test": o konunun sorularından yazdırılabilir test hazırlanır.
+
+
+6) DENEME SINAVI TAKİBİ
+
+   - Analiz > Denemeler > "Deneme ekle". Her ders için doğru ve yanlış sayısını girin.
+   - Net, LGS kuralıyla hesaplanır: 3 yanlış 1 doğruyu götürür.
+   - Grafikte toplam netin ya da tek bir dersin netinin gelişimi görünür;
+     "Ders ortalamaları" en çok net kaybedilen dersi gösterir.
+
+
+7) HAFTALIK RAPOR VE MOTİVASYON
+
+   - Analiz > Rapor: haftanın çalışılan günleri, tekrar sayısı, doğru oranı,
+     yeni ve öğrenilen sorular, zorlanılan konular ve denemeler.
+     "Raporu paylaş" resim hazırlar; WhatsApp'tan gönderebilirsiniz.
+   - Pazar günleri Bugün ekranında "Haftalık rapor hazır" kartı çıkar.
+   - Bugün ekranında gün serisi (alev) ve "Bu hafta" takibi var.
+     Ayarlar > "Haftalık hedef (gün)" ile haftada kaç gün çalışılacağını seçin.
+   - Öğrenilen sorularda, haftalık hedefte ve rekor nette kutlama çıkar;
+     Analiz > Genel'de rozetler toplanır.
+   - Not: Seri ve rapor bu sürümle tutulmaya başlar; önceki günler görünmez.
+
+
+8) YEDEK
+
+   - Kayıtlar, fotoğraflar, sesli notlar ve denemeler yalnızca o telefonda saklanır.
+   - Ara sıra Ayarlar > "Yedek al" yapın ve dosyayı Drive'a ya da WhatsApp'ta
+     kendinize gönderin. Yeni telefonda Ayarlar > "Yedekten yükle".
+   - iPhone'da uygulamayı hep ana ekrandaki simgeden açın.
+
+
+9) YAPAY ZEKÂ YARDIMI (İSTEĞE BAĞLI, ÜCRETSİZ)
+
+   Kullanıldığı yerler: kalem izlerini bulma, cevapları/ders/konuyu okuma,
+   toplu ekleme ve benzer soru üretme. İnternet gerekir.
+
+   Anahtar almak (bir kez):
+   - aistudio.google.com/apikey adresini açın, Google hesabınızla girin.
+   - "Create API key" ile anahtar oluşturun (AIza ile başlar), kopyalayın.
+   - Uygulamada Ayarlar > Yapay zekâ yardımı kutusuna yapıştırıp Kaydet'e basın.
+   - Ödeme (billing) ayarı yapmayın; ücretsiz kullanım yeterli.
+   - Ücretsiz kullanımın dakikalık sınırı vardır. Toplu eklemede sınır dolarsa
+     program yarım dakika bekleyip kendisi devam eder.
+
+   Claude'da çöz (isteğe bağlı): Sorunun altındaki ve çözüm ekranındaki
+   "Claude'da çöz" düğmesi soru fotoğrafını ve hazır metni paylaş menüsüyle
+   Claude uygulamasına gönderir. Menüden Claude'u seçip gönderin. Kendi Claude
+   aboneliğiniz kullanılır; anahtar gerekmez. Claude'un çözümü programa kaydedilmez.
+
+   Not: Ücretsiz kullanımda Google gönderilen fotoğrafları ürünlerini geliştirmek
+   için kullanabilir. Yalnızca soru fotoğrafı gönderilir. Yapay zekânın ürettiği
+   sorular nadiren hatalı olabilir.
+
+
+10) KONU LİSTELERİ HAKKINDA
+
+   - 5, 6 ve 7. sınıf konuları MEB Türkiye Yüzyılı Maarif Modeli (tymm.meb.gov.tr)
+     temalarından alınmıştır. 8. sınıf, LGS programındaki ünitelerdir.
+   - Türkçe dil bilgisi konuları test kitaplarındaki başlıklara göre hazırlanmıştır.
