@@ -12,7 +12,7 @@ var INTERVALS=[1,3,7,15,30];
 var MONTHS=["Ocak","Şubat","Mart","Nisan","Mayıs","Haziran","Temmuz","Ağustos","Eylül","Ekim","Kasım","Aralık"];
 var DAYS=["Pazar","Pazartesi","Salı","Çarşamba","Perşembe","Cuma","Cumartesi"];
 var VIEWS=["home","defter","analiz","ayarlar"];
-var APP_VERSION="Sürüm 20 · 15 Kasım 2026";
+var APP_VERSION="Sürüm 21 · 15 Kasım 2026";
 var LOGO_TILE='{{LOGO_TILE}}';
 var ICONS={
   cam:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>',
@@ -454,7 +454,7 @@ async function saveResults(){
     if(nm)setTimeout(function(){celebrateMastered(mB,mB+nm)},1500);else afterStudy(wk);
     var sh=dailySheet(),left=sh?sh.open.filter(function(id){return !(id in res.marks)}).length:0;
     res.marks={};res.saving=false;
-    if(!left)closeResults();else renderResults();
+    if(!left){closeResults();if(bad){var rd=on||todayStr();setTimeout(function(){if(!dayState)openDay(rd,true)},350)}}else renderResults();
   }catch(e){res.saving=false;renderResults();writeErr(e)}
 }
 function writeErr(e){toast("Kaydedilemedi. Uygulamayı kapatıp yeniden açmayı dene.")}

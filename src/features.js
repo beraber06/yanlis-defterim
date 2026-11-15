@@ -1317,7 +1317,7 @@ async function applySchedule(announce){
 }
 /* ---------- one day's questions (tap a day in the week strip) ---------- */
 var dayState=null;
-function openDay(d){dayState={date:d,only:false};$("#day").hidden=false;pushLayer("day",closeDay);renderDay()}
+function openDay(d,only){dayState={date:d,only:!!only,cFrom:0};$("#day").hidden=false;pushLayer("day",closeDay);renderDay()}
 function closeDay(){dayState=null;$("#day").hidden=true;uiClosed("day")}
 function dayTitle(d){var x=parse(d),n=diffDays(d);return (n===0?"Bugün":n===-1?"Dün":n===1?"Yarın":DAYS[x.getDay()])+", "+x.getDate()+" "+MONTHS[x.getMonth()]}
 function dayData(d){
@@ -1377,6 +1377,12 @@ function renderDay(){
     }
     if(ids.length)w.appendChild(btn("primary block",ids.length>1?"Yapay zekâ sırayla çözsün ("+ids.length+" soru)":"Yapay zekâ çözsün",function(){var f=ids.filter(function(x){var i=byId(x);return i&&!i.aiSol})[0]||ids[0];openSolve(f,ids)},ICONS.bulb));
     if(ids.length>1)w.appendChild(el("p","muted small","Çözümler tek tek açılır; “Sonraki soru” ile ilerlersin. Daha önce çözülenler hazır gelir, internet gerekmez."));
+    if(ids.length){
+      var CB=10;if(st.cFrom>=ids.length)st.cFrom=0;
+      var part=ids.slice(st.cFrom,st.cFrom+CB),lbl=ids.length<=CB?(ids.length>1?"Hepsini Claude'da çöz ("+ids.length+" soru)":"Claude'da çöz"):"Claude'da çöz ("+(st.cFrom+1)+"–"+(st.cFrom+part.length)+". sorular / "+ids.length+")";
+      w.appendChild(btn("ghost block",lbl,function(){claudeGo(part.map(byId).filter(Boolean),function(){if(ids.length>CB){st.cFrom+=CB;renderDay()}})},ICONS.share));
+      if(ids.length>1)w.appendChild(el("p","muted small",ids.length<=CB?"Sorular tek mesajda, fotoğraflarıyla Claude uygulamasına gider.":"Claude'a tek seferde en fazla "+CB+" soru gönderilir; gönderdikten sonra düğme sıradaki "+CB+" soruya geçer."));
+    }
     function sec(title,arr,resOf){if(!arr.length)return;var s=el("div","stack");s.style.gap="10px";s.appendChild(el("h3",null,title));arr.forEach(function(x){s.appendChild(resOf(x))});w.appendChild(s)}
     sec(d===t?"Bugün çözülenler":"Çözülen sorular",solved,function(x){return dayItem(x.it,x.ok,ids)});
     if(!st.only){
@@ -1400,28 +1406,51 @@ function claudePrompt(it){
   return L.join("\n");
 }
 function claudeBtn(it,cls){return btn(cls||"ghost block","Claude'da çöz",function(){claudeGo(it)},ICONS.share)}
-async function claudeShare(it){
-  var text=claudePrompt(it),src=photoSrc(it.qPhoto),file=null,copied=false;
-  try{if(src){var bl=await (await fetch(src)).blob();var ty=(bl.type||"image/jpeg").split(";")[0];file=new File([bl],"soru."+(ty.indexOf("png")>=0?"png":"jpg"),{type:ty})}}catch(e){file=null}
+/* several questions in one message: photos are numbered 1-soru, 2-soru … in the same order as the text */
+function claudePromptMany(list){
+  if(list.length===1)return claudePrompt(list[0]);
+  var g=list[0].grade||S.grade||7;
+  var L=["Ekte "+g+". sınıf öğrencimin yanlış yaptığı "+list.length+" soru var. Fotoğraflar sırayla 1. soru, 2. soru… (dosya adları da 1-soru, 2-soru…).",""];
+  list.forEach(function(it,k){
+    var mine=it.mine&&it.mine!=="bos"?it.mine.split(",").join(", "):"";
+    var s=(k+1)+". soru: "+subjName(it.subject,it.grade||g)+(it.topic?" (konu: "+it.topic+")":"")+".";
+    if(it.correct)s+=" Cevap anahtarına göre doğru cevap "+it.correct+".";
+    if(mine)s+=" Öğrenci "+mine+" şıkkını işaretlemiş.";else if(it.mine==="bos")s+=" Öğrenci boş bırakmış.";
+    if(!photoSrc(it.qPhoto))s+=" (Fotoğrafı yok.)";
+    if(it.note)s+=" Soru metni / not: "+it.note;
+    L.push(s);
+  });
+  L.push("","Her soruyu ayrı başlık altında, "+g+". sınıf öğrencisine adım adım, kısa ve sade cümlelerle anlatarak çöz. Kendin çöz; sonucun cevap anahtarından farklı çıkarsa bunu açıkça yaz. Her sorunun sonunda akılda tutulacak kuralı bir cümleyle ve öğrencinin şıkkının neden yanlış olduğunu yaz.");
+  return L.join("\n");
+}
+async function claudeShareList(list){
+  var text=claudePromptMany(list),files=[],copied=false,many=list.length>1;
+  for(var k=0;k<list.length;k++){
+    var src=photoSrc(list[k].qPhoto);if(!src)continue;
+    try{var bl=await (await fetch(src)).blob();var ty=(bl.type||"image/jpeg").split(";")[0];files.push(new File([bl],(many?(k+1)+"-soru.":"soru.")+(ty.indexOf("png")>=0?"png":"jpg"),{type:ty}))}catch(e){}
+  }
   try{await navigator.clipboard.writeText(text);copied=true}catch(e){}
   var data={text:text};
-  if(file&&navigator.canShare&&navigator.canShare({files:[file]}))data.files=[file];
+  if(files.length&&navigator.canShare&&navigator.canShare({files:files}))data.files=files;
   if(navigator.share&&(!navigator.canShare||navigator.canShare(data))){
-    try{await navigator.share(data);if(copied)toast("Claude'da metin görünmezse yazı kutusuna uzun basıp Yapıştır'ı seç.");return}
-    catch(e){if(e&&e.name==="AbortError")return}
+    try{await navigator.share(data);if(copied)toast("Claude'da metin görünmezse yazı kutusuna uzun basıp Yapıştır'ı seç.");return true}
+    catch(e){if(e&&e.name==="AbortError")return false}
   }
-  toast(copied?"Metin kopyalandı. Claude'u açıp yazı kutusuna yapıştır"+(file?", soru fotoğrafını da ekle.":"."):"Bu cihaz paylaşmayı desteklemiyor.");
+  toast(copied?"Metin kopyalandı. Claude'u açıp yazı kutusuna yapıştır"+(files.length?", soru fotoğraflarını da ekle.":"."):"Bu cihaz paylaşmayı desteklemiyor.");
+  return false;
 }
-function claudeGo(it){
-  if(lsGet("claudeTip")){claudeShare(it);return}
+function claudeShare(it){return claudeShareList([it])}
+function claudeGo(x,done){
+  var list=Array.isArray(x)?x:[x],it=list[0];
+  if(lsGet("claudeTip")){claudeShareList(list).then(function(r){if(r&&done)done()});return}
   var w=$("#dlg"),d=w.firstElementChild;d.replaceChildren();
   d.appendChild(el("h2",null,"Claude'da çözdür"));
   var ol=el("ol","dlgsteps");
-  ["Açılan paylaş menüsünden Claude'u seç.","Soru fotoğrafı ve hazır metin Claude'a gelir; gönder.","Metin gelmezse yazı kutusuna uzun basıp Yapıştır'ı seç. Metin kopyalanmış olur."].forEach(function(s){ol.appendChild(el("li",null,s))});
+  ["Açılan paylaş menüsünden Claude'u seç.",(list.length>1?list.length+" sorunun fotoğrafları":"Soru fotoğrafı")+" ve hazır metin Claude'a gelir; gönder.","Metin gelmezse yazı kutusuna uzun basıp Yapıştır'ı seç. Metin kopyalanmış olur."].forEach(function(s){ol.appendChild(el("li",null,s))});
   d.appendChild(ol);
   d.appendChild(el("p","muted small","Claude uygulamasının telefonda yüklü olması gerekir. Kendi Claude aboneliğin kullanılır, ek ücret çıkmaz. Claude'un çözümü Claude uygulamasında kalır, programa kaydedilmez."));
   var bs=el("div","btns");bs.appendChild(btn("ghost","Vazgeç",closeDialog));
-  var ok=btn("primary","Devam",async function(){lsSet("claudeTip","1");ok.disabled=true;try{await claudeShare(it)}finally{closeDialog()}},ICONS.share);
+  var ok=btn("primary","Devam",async function(){lsSet("claudeTip","1");ok.disabled=true;var r=false;try{r=await claudeShareList(list)}finally{closeDialog()}if(r&&done)done()},ICONS.share);
   bs.appendChild(ok);d.appendChild(bs);
   w.hidden=false;pushLayer("dlg",closeDialog);try{ok.focus({preventScroll:true})}catch(e){}
 }

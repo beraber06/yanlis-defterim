@@ -1,4 +1,4 @@
-YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 20)
+YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 21)
 
 Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulamasıdır.
 İnternet yalnızca kurulumda, güncellemede ve isteğe bağlı yapay zekâ özelliklerinde gerekir.
@@ -47,6 +47,9 @@ Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulam
      öğrenilmiş sayılır ve bir daha sorulmaz. Yanlış çözülürse sayaç sıfırlanır.
    - Bu günlerin hepsi Ayarlar > "Soru ne zaman yeniden gelsin" bölümünden
      değiştirilir. Değiştirince bekleyen soruların günü de kendiliğinden kayar.
+   - Sonuçlar kaydedilince yanlış yapılan sorular hemen listelenir. Oradan
+     "Yapay zekâ sırayla çözsün" (programın içinde) ya da "Hepsini Claude'da çöz"
+     (tek mesajda Claude uygulamasına) ile çözdürebilirsiniz.
    - Kâğıtta çözdüyseniz Bugün ekranındaki "Sonuçları gir" ile sonuçları girin;
      girilmeyen sorular ilerlemez ve tekrar gelir. Kart, sonuçlar girilene kadar
      günler geçse de ekranda kalır.
