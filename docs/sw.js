@@ -1,6 +1,6 @@
 // Yanlış Defterim: uygulama dosyalarını telefona kaydeder, internetsiz açılmasını sağlar.
 // Yeni sürümde aşağıdaki adı değiştirmek eski dosyaları temizler.
-const CACHE = "yanlis-defterim-v22";
+const CACHE = "yanlis-defterim-v23";
 const FILES = [
   "./",
   "index.html",
@@ -24,7 +24,11 @@ const FILES = [
 ];
 
 self.addEventListener("install", (event) => {
-  event.waitUntil(caches.open(CACHE).then((c) => c.addAll(FILES)).then(() => self.skipWaiting()));
+  event.waitUntil(
+    caches.open(CACHE)
+      .then((c) => c.addAll(FILES.map((f) => new Request(f, { cache: "reload" }))))
+      .then(() => self.skipWaiting())
+  );
 });
 
 self.addEventListener("activate", (event) => {
@@ -40,7 +44,9 @@ self.addEventListener("activate", (event) => {
 // Only a real copy of the app is used: if the host answers with an error or with some other
 // page (for example "site paused"), the saved copy opens instead and nothing is overwritten.
 function pageFromNetwork(req) {
-  const net = fetch(req).then(async (res) => {
+  // cache: "no-cache" asks the site every time; GitHub Pages otherwise lets the browser
+  // reuse an old copy for 10 minutes, which delayed new versions.
+  const net = fetch(req.url, { cache: "no-cache", credentials: "same-origin" }).then(async (res) => {
     if (!res.ok) return null;
     const text = await res.clone().text();
     if (text.indexOf("<title>Yanlış Defterim") < 0) return null;

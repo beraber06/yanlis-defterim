@@ -101,7 +101,7 @@ core = (B / "core.js").read_text(encoding="utf-8")
 core = rep(core, "{{LOGO_TILE}}", (B / "logo_tile.svg").read_text().replace("'", "\\'"))
 js = ("<script>\n(function(){\n\"use strict\";\n" + (B / "mufredat.js").read_text(encoding="utf-8") + "\n" + core + "\n" + photos_js +
       editor_js + overrides + ai_js + (B / "pdf.js").read_text(encoding="utf-8") + "\n" + (B / "features.js").read_text(encoding="utf-8") + "\n" + store_js + boot +
-      "})();\nif(\"serviceWorker\" in navigator&&location.protocol!==\"file:\"){window.addEventListener(\"load\",function(){navigator.serviceWorker.register(\"sw.js\").catch(function(){})})}\n</script>\n</body>\n</html>\n")
+      "})();\nif(\"serviceWorker\" in navigator&&location.protocol!==\"file:\"){window.addEventListener(\"load\",function(){var t0=Date.now(),had=!!navigator.serviceWorker.controller,done=false;navigator.serviceWorker.addEventListener(\"controllerchange\",function(){if(!had||done)return;done=true;if(Date.now()-t0<15000&&!document.querySelector(\".screen:not([hidden]),.overlay:not([hidden])\"))location.reload();else if(typeof toast===\"function\")toast(\"Yeni sürüm yüklendi. Uygulamayı kapatıp açınca görünür.\")});navigator.serviceWorker.register(\"sw.js\",{updateViaCache:\"none\"}).then(function(r){try{r.update()}catch(e){}}).catch(function(){})})}\n</script>\n</body>\n</html>\n")
 out = head + js
 for bad in ["{{", "renderStats()", "view===\"ekle\""]:
     if bad in out.replace("renderStats(){", ""):

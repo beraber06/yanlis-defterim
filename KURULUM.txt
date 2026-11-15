@@ -1,4 +1,4 @@
-YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 22)
+YANLIŞ DEFTERİM - KURULUM VE KULLANIM (Sürüm 23)
 
 Bu klasör, telefona kurulan ve internetsiz çalışan Yanlış Defterim uygulamasıdır.
 İnternet yalnızca kurulumda, güncellemede ve isteğe bağlı yapay zekâ özelliklerinde gerekir.
